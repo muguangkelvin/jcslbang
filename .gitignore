@@ -18,4 +18,6 @@ Thumbs.db
 
 # temporary scratch files
 scratch/
+package-lock.json
+
 
