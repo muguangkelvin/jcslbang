@@ -9,7 +9,7 @@
     "preview": "astro preview"
   },
   "engines": {
-    "node": ">=18.14.1"
+    "node": ">=22.12.0"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.4",
