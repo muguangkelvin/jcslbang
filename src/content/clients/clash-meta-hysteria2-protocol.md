@@ -1,31 +1,44 @@
 ---
 title: "Clash Meta 内核 Hysteria2 (Hy2) 协议配置指南：恶劣弱网强制提速"
-description: "针对 Clash Meta 内核 Hysteria2 (Hy2) 协议配置指南：恶劣弱网强制提速 的 2026 专业深度实测与保姆级配置指南，涵盖技术原理拆解、跑分对比、常见坑点规避与高效科学上网选型方案。"
+description: "详细讲解在 Clash Verge Rev 与 Sing-box 中配置 Hysteria2 (Hy2) 协议。解析 UDP 拥塞控制算法、端口跳跃、TLS 加密与弱网拥堵环境下的强制提速。"
 pubDate: "2026-09-19"
 updatedDate: "2026-09-20"
 category: "客户端教程"
-tags: ["Clash教程", "机场实力榜", "客户端教程", "2026机场推荐"]
-keywords: ["Clash教程", "Shadowrocket配置", "Sing-box教学", "v2rayN使用"]
-search_synonyms: ["魔法上网", "梯子推荐", "翻墙机场", "科学上网", "IPLC专线", "4K秒开", "晚高峰不卡顿", "Clash教程", "Sing-box", "Shadowrocket", "节点测速"]
+tags: ["Hysteria2", "Hy2协议", "Clash Meta", "弱网提速", "客户端教程"]
+keywords: ["Hysteria2配置教程", "Hy2协议节点", "Clash Meta Hy2", "弱网加速梯子"]
+search_synonyms: ["Hy2协议怎么用", "UDP吞吐加速", "Hysteria2参数设置"]
 featured: true
 ---
 
 # Clash Meta 内核 Hysteria2 (Hy2) 协议配置指南：恶劣弱网强制提速
 
-## Hysteria2 (Hy2) 协议抗丢包原理与 QUIC 拥塞控制
-Hysteria2 是专门为高丢包、高延迟恶劣网络设计的下一代代理协议。它基于 UDP/QUIC 协议重构，抛弃了传统 TCP 协议在遇到丢包时剧烈降速的拥塞控制算法，采用了主动拥塞控制与双向补包机制。
+在晚高峰网络拥堵或本地宽带处于恶劣弱网环境（如校园网、晚间长城宽带、小区共享宽带）时，传统的 TCP 代理协议（如 VMess、Shadowsocks）常常因为频繁丢包引发 TCP 拥塞控制降速。新一代基于 QUIC/UDP 的 **Hysteria2 (Hy2)** 协议，凭其极具侵略性的丢包恢复与拥塞控制算法，成为了弱网环境下强行跑满带宽的首选方案。
 
-## Clash Meta (Mihomo) 内核对 Hy2 协议的支持说明
-传统的开源 Clash 内核原生不支持 Hysteria2。只有切换至 Mihomo (原 Clash Meta) 内核后，客户端才能正确解析 `hysteria2` 节点出站配置与加密参数。
+本文将介绍如何在基于 Mihomo (Clash Meta) 内核的客户端中配置并使用 Hysteria2 协议。
 
-## 在 Verge Rev 或配置文件中配置 Hysteria2 出站节点
-现代自营机场提供的订阅链接已内置 Hy2 节点。导入后，在节点列表中可以看到标记为 `Hy2` 或 `Hysteria2` 的线路。你也可以在 YAML 中配置 `obfs` 混淆密码以应对运营商封锁。
+---
 
-## 恶劣弱网与移动 4G/5G 环境下的单线程提速测试
-在丢包率达到 15% 的晚高峰弱网下实测：传统 VMess 协议速度降至 15Mbps；而开启 Hysteria2 协议后，单线程速率瞬间飚升至 250Mbps+，拖拽 4K 视频毫无卡顿。
+## 1. Hysteria2 协议的核心技术突破
 
-## 避免 Hy2 UDP 流量被部分本地运营商 QOS 限速的应对方案
-个别地区运营商会对长连接 UDP 实施 QOS 限速。若遇到 Hy2 断流，可在客户端设置中开启 `ports` 端口跳跃，或者切回全 IPLC 专线 TCP 节点。
+* **基于 QUIC/UDP 架构**：消除了传统 TCP 协议的三次握手与队头阻塞 (Head-of-Line Blocking) 延时。
+* **Brutal 拥塞控制算法**：即使在链路上发生 20% - 30% 丢包，Hy2 仍能根据预设的带宽速率强制发送数据包，维持极高的下行吞吐率。
+* **端口跳跃 (Port Hopping)**：支持在多个 UDP 端口之间动态跳变，有效抵御本地运营商对单一 UDP 端口的 QOS 限速。
 
-使用 Mihomo 内核搭配 Hysteria2 协议是弱网提速的绝佳方案。推荐体验搭载 Hy2 协议的自营机场（如 [灵动云](/providers/lingdong-cloud)）。
+---
 
+## 2. 在 Clash Verge Rev 中配置 Hy2 节点
+
+要使用 Hysteria2 协议，客户端底层必须切换为 **Mihomo (Meta) 内核**：
+
+1. 打开 Clash Verge Rev，进入设置页面，确认内核类型选择为 **Mihomo**。
+2. 导入支持 Hy2 协议的机场订阅链接。在节点列表中可以看到标注有 Hy2 或 Hysteria2 的节点。
+
+---
+
+## 3. 弱网环境下使用 Hy2 的优化技巧与注意事项
+
+### 设置合理的上下行带宽 (Up / Down)
+Hysteria2 的 Brutal 算法依赖正确的带宽设置。在客户端或配置文件中，down（下载速率）应填写为你本地宽带的真实带宽（例如 300Mbps 填 300 Mbps），up（上传速率）填 30 Mbps。填写过大可能导致本地路由器缓冲区溢出，填写过小则无法发挥最大提速性能。
+
+### 开启 UDP 转发与 TUN 模式
+如果需要使用 Hy2 协议加速外服联机游戏，请务必在客户端中开启 **TUN 模式**，确保 UDP 数据包不会被传统系统 HTTP 代理过滤掉。

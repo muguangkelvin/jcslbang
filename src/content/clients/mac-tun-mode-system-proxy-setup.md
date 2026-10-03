@@ -1,45 +1,42 @@
 ---
 title: "macOS 开启 TUN 模式与系统代理设置教程：解决终端与软件网络不走代理"
-description: "针对 macOS 开启 TUN 模式与系统代理设置教程：解决终端与软件网络不走代理 的 2026 专业深度实测与保姆级配置指南，涵盖技术原理拆解、跑分对比、常见坑点规避与高效科学上网选型方案。"
+description: "解决 Mac 系统终端 iTerm2、Brew、Git 与特定软件不走 Clash 代理的问题。详细教程涵盖 macOS 权限授权、TUN 模式挂载与环境变量配置。"
 pubDate: "2026-09-19"
 updatedDate: "2026-09-20"
 category: "客户端教程"
-tags: ["Clash教程", "机场实力榜", "客户端教程", "2026机场推荐"]
-keywords: ["Clash教程", "Shadowrocket配置", "Sing-box教学", "v2rayN使用"]
-search_synonyms: ["魔法上网", "梯子推荐", "翻墙机场", "科学上网", "IPLC专线", "4K秒开", "晚高峰不卡顿", "Clash教程", "Sing-box", "Shadowrocket", "节点测速"]
+tags: ["macOS代理", "Mac TUN模式", "终端代理", "Mac科学上网", "客户端教程"]
+keywords: ["Mac开启TUN模式", "macOS系统代理", "Mac终端走代理", "Mac HelperTool授权"]
+search_synonyms: ["Mac Clash终端不走代理", "Mac代理权限设置", "macOS网络扩展"]
 featured: true
 ---
 
 # macOS 开启 TUN 模式与系统代理设置教程：解决终端与软件网络不走代理
 
-## macOS 开启 TUN 模式与系统代理设置教程：解决终端与软件网络不走代理 的核心功能与适用网络环境
-关于 macOS 开启 TUN 模式与系统代理设置教程：解决终端与软件网络不走代理 的实际使用需求，理清客户端的协议内核与系统网络接管权限是首要基础。本指南将为你展开系统拆解。
+在苹果 macOS 系统上使用代理软件时，许多开发者经常遇到这样一个困扰：虽然浏览器开启系统代理后能打开 Google，但在终端 (Terminal / iTerm2) 中执行 git push、brew install 或者在 Docker 中拉取镜像时，依然频繁提示 Connection refused。
 
-## 使用 macOS 开启 TUN 模式与系统代理设置教程：解决终端与软件网络不走代理 前的准备工作与系统权限放行
-建议从 GitHub 官方 Release 页面或正版商店获取安装包。安装后须放行系统防火墙与创建虚拟网卡 (VPN/TUN) 授权，并确保电脑/手机时间与标准北京时间同步。
+这是因为 macOS 的系统代理只针对遵循 HTTP / HTTPS 代理规范的应用生效，而命令行与底层 socket 连接需要靠 **TUN 虚拟网卡** 或 **环境变量** 强制接管。
 
-## macOS 开启 TUN 模式与系统代理设置教程：解决终端与软件网络不走代理 的核心操作流程：订阅导入与规则分流
-1. 登录自营机场后台（如 [灵动云](/providers/lingdong-cloud) 或 [暮光网络](/providers/twilight)）复制订阅 URL。
-2. 打开客户端添加 Profiles 配置并拉取节点。
-3. 保持选择 Rule 规则模式，开启国内流量直连放行、国外流量走代理。
+---
 
-## macOS 开启 TUN 模式与系统代理设置教程：解决终端与软件网络不走代理 进阶配置：开启 TUN 模式与防止 DNS 泄漏
-若需要让终端命令行、Git 或外服游戏走代理，在软件中开启 TUN 虚拟网卡模式。TUN 模式将挂载底栈网卡，强制接管全盘 TCP/UDP 流量。
+## 一、macOS 开启系统代理与基础设置
 
-## macOS 开启 TUN 模式与系统代理设置教程：解决终端与软件网络不走代理 核心参数与全平台客户端支持横向对比
-以下为 macOS 开启 TUN 模式与系统代理设置教程：解决终端与软件网络不走代理 在主流操作系统中的兼容性与内核表现：
+1. 打开 Clash Verge Rev 或 Clash Nyanpasu 的 Mac 版。
+2. 开启 **System Proxy (系统代理)**。此时软件会自动在 macOS 系统设置 -> 网络 -> 代理 中勾选 HTTP 和 HTTPS 代理端口 (7890)。
+3. 在 Chrome 或 Safari 浏览器中测试访问外网是否正常。
 
-## 针对 macOS 开启 TUN 模式与系统代理设置教程：解决终端与软件网络不走代理 的节点选择与落地 IP 解锁优化
-在日常使用时，若遇到 ChatGPT 1020 报错或 Netflix 无法播放，建议在节点列表中优先切换至住宅 Native 原生 IP 线路。
+---
 
-## macOS 开启 TUN 模式与系统代理设置教程：解决终端与软件网络不走代理 常见连接故障与节点超时排查 FAQ
-遇到节点全部 Timeout，优先点开系统时间自动同步。出现端口 7890 占用时，在任务管理器中结束旧进程。
+## 二、开启 TUN 模式接管全盘与终端流量 (推荐方案)
 
-| 客户端软件名称 | 适用操作系统 | 核心代理内核 | TUN 模式支持 | 分流重写支持 | 适合用户类型 |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Clash Verge Rev** | Windows / macOS | Mihomo (Meta) | 支持 (一键勾选) | 支持 JS / YAML 扩展 | 追赶最新协议与桌面端首选 |
-| **Sing-box GUI** | 全平台 (Win/Mac/iOS/Android) | Sing-box 原生 | 支持 | 支持 JSON 规则集 | 追求极低内存占用与 Hy2 用户 |
-| **Shadowrocket (小火箭)** | iOS / iPadOS | 自研高效内核 | 支持 | 支持 JS 重写与去广告 | iPhone 苹果手机必备神器 |
+TUN 模式会在 macOS 内核中挂载一个 utun 虚拟网卡，把所有网卡级别的 TCP/UDP 数据包重定向给代理软件：
 
-掌握 macOS 开启 TUN 模式与系统代理设置教程：解决终端与软件网络不走代理 的正确方法后，选择稳定的自营专线机场（如 [灵动云](/providers/lingdong-cloud)），即可畅享无界访问。
+1. 打开 Clash 客户端设置页面，找到 **TUN Mode** 开关。
+2. 点击开启时，macOS 会弹出系统提示需要管理员密码以安装 **Privileged Helper Tool (提权辅助工具)**，输入 Mac 开机密码授权。
+3. **网络扩展许可**：在 macOS 13 (Ventura) 或 14 (Sonoma) 系统中，进入 系统设置 -> 隐私与安全性 -> 允许拓展加载，勾选允许代理组件运行。
+4. 开启 TUN 模式后，无需对终端做任何额外配置，终端命令行与所有后台应用将自动无缝走专线代理。
 
+---
+
+## 三、为终端命令行临时配置环境变量 (替代方案)
+
+如果你不希望开启全盘 TUN 模式，也可以仅在终端配置文件中加入代理环境变量，在终端执行快捷 alias 命令即可实现当前命令行窗口与代理端口的连通。

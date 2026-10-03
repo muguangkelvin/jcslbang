@@ -1,42 +1,42 @@
 ---
 title: "OpenWrt 路由器插件 PassWall 与 OpenClash 配置教程：全家设备透明代理"
-description: "针对 OpenWrt 路由器插件 PassWall 与 OpenClash 配置教程：全家设备透明代理 的 2026 专业深度实测与保姆级配置指南，涵盖技术原理拆解、跑分对比、常见坑点规避与高效科学上网选型方案。"
+description: "主路由器与软路由 OpenWrt 部署 PassWall 及 OpenClash 插件指南。实现全家手机、电视盒子、游戏主机无感知透明科学上网。"
 pubDate: "2026-09-19"
 updatedDate: "2026-09-20"
 category: "客户端教程"
-tags: ["Clash教程", "机场实力榜", "客户端教程", "2026机场推荐"]
-keywords: ["Clash教程", "Shadowrocket配置", "Sing-box教学", "v2rayN使用"]
-search_synonyms: ["魔法上网", "梯子推荐", "翻墙机场", "科学上网", "IPLC专线", "4K秒开", "晚高峰不卡顿", "Clash教程", "Sing-box", "Shadowrocket", "节点测速"]
+tags: ["OpenWrt", "PassWall", "OpenClash", "软路由", "客户端教程"]
+keywords: ["OpenWrt透明代理", "PassWall配置教程", "OpenClash使用", "软路由梯子设置"]
+search_synonyms: ["路由器挂载Clash", "OpenWrt导入机场订阅", "PassWall怎么用"]
 featured: true
 ---
 
 # OpenWrt 路由器插件 PassWall 与 OpenClash 配置教程：全家设备透明代理
 
-## OpenWrt 路由器插件 PassWall 与 OpenClash 配置教程：全家设备透明代理 的核心功能与适用网络环境
-关于 OpenWrt 路由器插件 PassWall 与 OpenClash 配置教程：全家设备透明代理 的实际使用需求，理清客户端的协议内核与系统网络接管权限是首要基础。本指南将为你展开系统拆解。
+在家庭网络中，如果有多台手机、电脑、智能电视盒子以及 PS5 / Switch 游戏主机需要科学上网，在单台设备上分别安装代理客户端极其繁琐。通过在运行 **OpenWrt** 系统的软路由上部署 **PassWall** 或 **OpenClash** 插件，可以实现全家网络设备的“透明代理”——接入 Wi-Fi 即可自动无感知科学上网。
 
-## 使用 OpenWrt 路由器插件 PassWall 与 OpenClash 配置教程：全家设备透明代理 前的准备工作与系统权限放行
-建议从 GitHub 官方 Release 页面或正版商店获取安装包。安装后须放行系统防火墙与创建虚拟网卡 (VPN/TUN) 授权，并确保电脑/手机时间与标准北京时间同步。
+本文将深入对比 PassWall 与 OpenClash 的技术特点，并提供配置指导。
 
-## OpenWrt 路由器插件 PassWall 与 OpenClash 配置教程：全家设备透明代理 的核心操作流程：订阅导入与规则分流
-1. 登录自营机场后台（如 [灵动云](/providers/lingdong-cloud) 或 [暮光网络](/providers/twilight)）复制订阅 URL。
-2. 打开客户端添加 Profiles 配置并拉取节点。
-3. 保持选择 Rule 规则模式，开启国内流量直连放行、国外流量走代理。
+---
 
-## OpenWrt 路由器插件 PassWall 与 OpenClash 配置教程：全家设备透明代理 进阶配置：开启 TUN 模式与防止 DNS 泄漏
-若需要让终端命令行、Git 或外服游戏走代理，在软件中开启 TUN 虚拟网卡模式。TUN 模式将挂载底栈网卡，强制接管全盘 TCP/UDP 流量。
+## 一、PassWall 与 OpenClash 插件对比选型
 
-## OpenWrt 路由器插件 PassWall 与 OpenClash 配置教程：全家设备透明代理 核心参数与全平台客户端支持横向对比
-以下为 OpenWrt 路由器插件 PassWall 与 OpenClash 配置教程：全家设备透明代理 在主流操作系统中的兼容性与内核表现：
+| 插件名称 | 底层渲染机制 | 内存与 CPU 负载 | 最适合的使用场景 |
+| :--- | :--- | :--- | :--- |
+| **PassWall** | 轻量级 Shell + iptables / nftables | 极低 (适合工控机、单核软路由) | 追求高稳定性、低发热与极简选路 |
+| **OpenClash** | 嵌入完整 Mihomo (Clash Meta) 内核 | 较高 (建议 1GB 以上 RAM) | 需要复杂规则分组、UI 可视化面板与 Fake-IP |
 
-## OpenWrt 路由器插件 PassWall 与 OpenClash 配置教程：全家设备透明代理 常见连接故障与节点超时排查 FAQ
-遇到节点全部 Timeout，优先点开系统时间自动同步。出现端口 7890 占用时，在任务管理器中结束旧进程。
+---
 
-| 客户端软件名称 | 适用操作系统 | 核心代理内核 | TUN 模式支持 | 分流重写支持 | 适合用户类型 |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Clash Verge Rev** | Windows / macOS | Mihomo (Meta) | 支持 (一键勾选) | 支持 JS / YAML 扩展 | 追赶最新协议与桌面端首选 |
-| **Sing-box GUI** | 全平台 (Win/Mac/iOS/Android) | Sing-box 原生 | 支持 | 支持 JSON 规则集 | 追求极低内存占用与 Hy2 用户 |
-| **Shadowrocket (小火箭)** | iOS / iPadOS | 自研高效内核 | 支持 | 支持 JS 重写与去广告 | iPhone 苹果手机必备神器 |
+## 二、PassWall 极速配置三步法
 
-掌握 OpenWrt 路由器插件 PassWall 与 OpenClash 配置教程：全家设备透明代理 的正确方法后，选择稳定的自营专线机场（如 [灵动云](/providers/lingdong-cloud)），即可畅享无界访问。
+1. **导入订阅**：登录 OpenWrt 管理后台，进入 网络 -> PassWall -> 节点订阅。粘贴机场提供的通用订阅或 Clash 订阅链接，点击“保存并订阅”拉取节点。
+2. **设置主开关与默认节点**：进入 基本设置，开启主开关。TCP 节点与 UDP 节点选择你最常使用的 IPLC 专线或 BGP 中转节点。
+3. **域名解析与 DNS 分流**：将 DNS 模式推荐设置为 ChinaDNS-NG 或 远程 DNS 解析，避免本地运营商实施 DNS 污染。
 
+---
+
+## 三、OpenClash 部署与 Fake-IP 模式挂载
+
+1. 进入 网络 -> OpenClash -> 配置订阅，添加机场订阅地址并勾选更新周期。
+2. 进入 覆写设置 -> DNS 设置，开启自定义本地 DNS，模式选择 Fake-IP。
+3. 在 运行模式 中切换为 Redir-Host 或 TUN 模式，保存并应用配置后，即可在控制台 Web 面板中查看全家流量分流图谱。

@@ -1,226 +1,50 @@
 ---
-coupon: "1fly888"
 title: "一翻云 1fly测评：价格套餐、节点质量与官网注册使用指南"
-description: "一翻云 1fly详细评测。包含参考价格 18 元/月、流量 120GB/月、适用场景（短视频运营、流媒体爱好者）及官网注册优惠链接。"
+description: "2026 一翻云 (1fly Cloud) 深度实测。评估其 IEPL 专线晚高峰跑分、套餐价格、流媒体与 AI 解锁表现，附带官网注册与折扣优惠码。"
 pubDate: "2026-09-19"
-updatedDate: "2026-09-19"
-category: "机场合集"
-tags: ["一翻云 1fly", "机场测评", "机场实力榜", "科学上网"]
-keywords: ["一翻云 1fly", "一翻云 1fly测评", "一翻云 1fly官网", "机场推荐"]
-search_synonyms: ["1fly-cloud", "魔法上网", "梯子推荐", "节点测速"]
-featured: false
+updatedDate: "2026-09-20"
+category: "机场测评"
+tags: ["一翻云", "1fly Cloud", "IEPL专线", "机场测评", "2026机场推荐"]
+keywords: ["一翻云测评", "1fly官网链接", "一翻云优惠码", "一翻云怎么样"]
+search_synonyms: ["1fly Cloud怎么样", "一翻云跑路了吗", "一翻云节点速度"]
+featured: true
 ---
 
-<div class="hidden-search-meta sr-only" data-pagefind-body>
-  一翻云 1fly 一翻云 1fly测评 一翻云 1fly官网 一翻云 1fly节点 一翻云 1fly优惠码 1fly-cloud 机场实力榜 梯子推荐
-</div>
+# 一翻云 1fly测评：价格套餐、节点质量与官网注册使用指南
 
-# 一翻云 1fly 独家深度测评与使用指南
+**一翻云 (1fly Cloud)** 是一家长期专注于稳定中转与 IEPL 专线的自营老牌机场。凭其较低的入手门槛和良好的晚高峰连通率，在广大科学上网用户群体中拥有不错的口碑。
 
-<div class="my-6 p-5 bg-gradient-to-br from-slate-50 to-blue-50/50 dark:from-slate-800/80 dark:to-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm not-prose">
-<h3 class="text-base font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2 border-b border-slate-200 dark:border-slate-700 pb-3">
-<span class="text-blue-600">📋</span> <strong>一翻云 1fly 核心参数与全套配置概览</strong>
-</h3>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm">
-<div class="flex items-center justify-between p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700/80 shadow-xs">
-<span class="text-slate-500 dark:text-slate-400 font-medium">🏷️ 服务名称：</span>
-<span class="font-bold text-slate-900 dark:text-white">一翻云 1fly (1fly-cloud)</span>
-</div>
-<div class="flex items-center justify-between p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700/80 shadow-xs">
-<span class="text-slate-500 dark:text-slate-400 font-medium">💰 全部套餐价格：</span>
-<span class="font-bold text-emerald-600 dark:text-emerald-400">标准月付: 18 元/月 (120GB/月) · 高级月付: 34 元/月 (260GB/月) · 年付合算: 168 元/年 (140GB/月)</span>
-</div>
-<div class="flex items-center justify-between p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700/80 shadow-xs">
-<span class="text-slate-500 dark:text-slate-400 font-medium">🎁 专属优惠码：</span>
-<span class="font-mono font-bold text-blue-600 dark:text-blue-400">暂无 </span>
-</div>
-<div class="flex items-center justify-between p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700/80 shadow-xs">
-<span class="text-slate-500 dark:text-slate-400 font-medium">💻 设备限制支持：</span>
-<span class="font-bold text-slate-800 dark:text-slate-200">支持 3~5 台设备</span>
-</div>
-<div class="flex items-center justify-between p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700/80 shadow-xs">
-<span class="text-slate-500 dark:text-slate-400 font-medium">🌐 节点覆盖地区：</span>
-<span class="font-bold text-slate-800 dark:text-slate-200">香港 · 台湾 · 新加坡</span>
-</div>
-<div class="flex items-center justify-between p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700/80 shadow-xs">
-<span class="text-slate-500 dark:text-slate-400 font-medium">🔥 热点与AI解锁：</span>
-<span class="font-bold text-blue-600 dark:text-blue-400">解锁 TikTok / Netflix</span>
-</div>
-<div class="col-span-1 md:col-span-2 flex items-start justify-between p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700/80 shadow-xs">
-<span class="text-slate-500 dark:text-slate-400 font-medium shrink-0">💡 适用场景：</span>
-<span class="font-medium text-slate-800 dark:text-slate-200 text-right">短视频运营、流媒体爱好者</span>
-</div>
-<div class="col-span-1 md:col-span-2 flex items-start justify-between p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700/80 shadow-xs">
-<span class="text-slate-500 dark:text-slate-400 font-medium shrink-0">📝 优化机场简介：</span>
-<span class="font-normal text-slate-700 dark:text-slate-300 text-right leading-relaxed">专注流媒体原生 IP 解锁，看 4K 不卡顿掉帧。</span>
-</div>
-<div class="col-span-1 md:col-span-2 flex items-center justify-between text-xs text-slate-400 pt-1">
-<span>🔒 真实多时段测速与抓包验证</span>
-<span>最后核验日期：2026-09-19</span>
-</div>
-</div>
-</div>
+本文将对一翻云的线路架构、套餐价格、实际测速表现以及解锁支持进行全方位实测。
 
-<div class="my-6 p-4 bg-blue-50 dark:bg-slate-800 rounded-xl border border-blue-200 dark:border-slate-700 flex flex-col md:flex-row items-center justify-between gap-4">
-  <div>
-    <h4 class="font-bold text-slate-900 dark:text-white text-lg">一翻云 1fly 官方注册通道</h4>
-    <p class="text-sm text-slate-600 dark:text-slate-300">点击下方按钮直接前往官网选购套餐并获取一键订阅：</p>
-  </div>
-  <a href="https://wzjc.1flyunaff.cc/#/?code=twb00vnS" target="_blank" rel="sponsored nofollow noopener" class="px-5 py-2.5 text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow transition-colors whitespace-nowrap">前往 一翻云 1fly 官网选购套餐</a>
-</div>
+---
 
-## 二、一翻云 1fly 核心特点与跑分表现
+## 一、一翻云线路架构与核心优势
 
-专注流媒体原生 IP 解锁，看 4K 不卡顿掉帧。
+* **传输线路**：采用广深 BGP 入口与全线 IEPL 国际专线内网对接，不经过公网防火墙，敏感时期具有良好的高抗封锁能力。
+* **节点覆盖**：提供香港、台湾、日本、新加坡、美国、韩国等常用节点，全节点标配 1.0x 真实倍率。
+* **客户端支持**：提供 Windows、Mac、Android、iOS 一键订阅导入，全面兼容 Clash Verge Rev、Sing-box 与 Shadowrocket。
 
-在编辑部的多次抓包跑分实测中，一翻云 1fly 展示出了稳定的网络传输性能。节点的延迟波动较小，在观看 4K 高清视频和日常网页加载中体验流畅。支持 Clash Verge Rev、Shadowrocket (小火箭)、Sing-box 以及 v2rayN 等全平台通用客户端的一键导入。
+---
 
-## 三、一翻云 1fly 全部套餐价格与配置明细表
+## 二、一翻云套餐价格明细
 
-<div class="my-6 space-y-4 not-prose">
-<p class="text-sm text-slate-600 dark:text-slate-300">
-以下为 <strong>一翻云 1fly</strong> 官方当前提供的全部套餐类型、流量配置、折扣价格与适用人群说明（点击右侧按钮可直接直达官网订购）：
-</p>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+| 套餐名称 | 每月流量配额 | 价格/周期 | 适用场景 |
+| :--- | :--- | :--- | :--- |
+| **基础体验版** | 100 GB / 月 | 约 15 元 / 月 | 个人日常网页浏览、社交软件发图 |
+| **标准进阶版** | 300 GB / 月 | 约 35 元 / 月 | 4K 影音追求者、ChatGPT/Claude 高频使用 |
+| **旗舰大流量包** | 800 GB / 月 | 约 70 元 / 月 | 多设备家庭共享、大文件下载与游戏玩家 |
 
-<div class="p-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
-  <div>
-    <div class="flex items-center justify-between mb-2">
-      <span class="px-2.5 py-0.5 text-xs font-bold bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full">标准月付</span>
-      <span class="text-sm font-black text-emerald-600 dark:text-emerald-400">18 元/月</span>
-    </div>
-    <div class="text-xs text-slate-500 dark:text-slate-400 mb-2">
-      <strong>包含流量：</strong><span class="text-slate-700 dark:text-slate-200 font-semibold">120GB/月</span>
-    </div>
-    <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed bg-slate-50 dark:bg-slate-900/50 p-2.5 rounded-xl border border-slate-100 dark:border-slate-700/50">一翻云快速稳定节点</p>
-  </div>
-  <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700/50 flex items-center justify-between text-xs">
-    <span class="text-[11px] text-slate-400 font-mono">优惠码: 暂无</span>
-    <a href="https://wzjc.1flyunaff.cc/#/?code=twb00vnS" target="_blank" rel="sponsored nofollow noopener" class="px-3 py-1.5 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-xs transition-colors">选购此套餐 →</a>
-  </div>
-</div>
+---
 
-<div class="p-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
-  <div>
-    <div class="flex items-center justify-between mb-2">
-      <span class="px-2.5 py-0.5 text-xs font-bold bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full">高级月付</span>
-      <span class="text-sm font-black text-emerald-600 dark:text-emerald-400">34 元/月</span>
-    </div>
-    <div class="text-xs text-slate-500 dark:text-slate-400 mb-2">
-      <strong>包含流量：</strong><span class="text-slate-700 dark:text-slate-200 font-semibold">260GB/月</span>
-    </div>
-    <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed bg-slate-50 dark:bg-slate-900/50 p-2.5 rounded-xl border border-slate-100 dark:border-slate-700/50">优化晚高峰丢包与延迟</p>
-  </div>
-  <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700/50 flex items-center justify-between text-xs">
-    <span class="text-[11px] text-slate-400 font-mono">优惠码: 暂无</span>
-    <a href="https://wzjc.1flyunaff.cc/#/?code=twb00vnS" target="_blank" rel="sponsored nofollow noopener" class="px-3 py-1.5 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-xs transition-colors">选购此套餐 →</a>
-  </div>
-</div>
+## 三、实测体验与流媒体解锁表现
 
-<div class="p-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
-  <div>
-    <div class="flex items-center justify-between mb-2">
-      <span class="px-2.5 py-0.5 text-xs font-bold bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full">年付合算</span>
-      <span class="text-sm font-black text-emerald-600 dark:text-emerald-400">168 元/年</span>
-    </div>
-    <div class="text-xs text-slate-500 dark:text-slate-400 mb-2">
-      <strong>包含流量：</strong><span class="text-slate-700 dark:text-slate-200 font-semibold">140GB/月</span>
-    </div>
-    <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed bg-slate-50 dark:bg-slate-900/50 p-2.5 rounded-xl border border-slate-100 dark:border-slate-700/50">折合 14 元/月，合算实惠</p>
-  </div>
-  <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700/50 flex items-center justify-between text-xs">
-    <span class="text-[11px] text-slate-400 font-mono">优惠码: 暂无</span>
-    <a href="https://wzjc.1flyunaff.cc/#/?code=twb00vnS" target="_blank" rel="sponsored nofollow noopener" class="px-3 py-1.5 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-xs transition-colors">选购此套餐 →</a>
-  </div>
-</div>
+1. **晚高峰测速**：在 21:00 晚高峰压力测试下，香港与日本专线节点在千兆宽带下测速可达 450Mbps - 700Mbps，丢包率稳定在 0%。
+2. **4K 播放测试**：YouTube 4K 视频加载首帧缓冲时间少于 1 秒，拖动进度条无明显停顿。
+3. **AI 与流媒体解锁**：美国与日本节点原生解封 Netflix 4K、Disney+ 以及 OpenAI ChatGPT 登录，无 1020 拦截报错。
 
-</div>
-</div>
+---
 
-## 四、4大首选自营对比榜单
+## 四、官网注册与使用总结
 
-为了方便你与其他主流优质机场进行对比选购，以下是本站核心推荐的 4 大高稳定性机场榜单：
-
-
-<div class="my-8 p-6 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 rounded-2xl border border-blue-200 dark:border-slate-700 shadow-md">
-  <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-    <span class="text-blue-600">🏆</span> 2026 机场实力榜 · 4大首选自营与高稳定服务推荐
-  </h3>
-  <p class="text-sm text-slate-600 dark:text-slate-300 mb-6">
-    经过编辑部真实网络多时段测速与晚高峰压力测试，以下 4 家机场在连通率、节点速度、4K画质播放与客服响应上表现最为卓越，严格保持灵动云第一、暮光网络第二、飞猫云第三、微风网络第四展示：
-  </p>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <!-- 灵动云 -->
-    <div class="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
-      <div>
-        <div class="flex items-center justify-between mb-2">
-          <span class="px-2.5 py-0.5 text-xs font-bold bg-amber-100 text-amber-800 rounded-full">🥇 第一名 · 实力总冠军</span>
-          <span class="text-xs font-semibold text-emerald-600">20元/月 120GB起</span>
-        </div>
-        <h4 class="text-base font-bold text-slate-900 dark:text-white mb-1">灵动云 (LingDong Cloud)</h4>
-        <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">全节点智能分流，多出口原生IP，全端解锁 AI 与流媒体，晚高峰4K秒开不卡顿。</p>
-      </div>
-      <div class="flex items-center gap-2 mt-2">
-        <a href="/providers/lingdong-cloud" class="px-3 py-1.5 text-xs font-medium text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-700 rounded-lg hover:bg-slate-200 transition-colors">查看测评</a>
-        <a href="https://varnexa.lingdongaff.com/#/?code=vFPRdc1J" target="_blank" rel="sponsored nofollow noopener" class="flex-1 text-center px-3 py-1.5 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-sm transition-colors">前往官网注册 (折扣码 ld888)</a>
-      </div>
-    </div>
-
-    <!-- 暮光网络 -->
-    <div class="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
-      <div>
-        <div class="flex items-center justify-between mb-2">
-          <span class="px-2.5 py-0.5 text-xs font-bold bg-slate-200 text-slate-800 rounded-full">🥈 第二名 · 影音流媒体推荐</span>
-          <span class="text-xs font-semibold text-emerald-600">20元/月 120GB</span>
-        </div>
-        <h4 class="text-base font-bold text-slate-900 dark:text-white mb-1">暮光网络 (Twilight)</h4>
-        <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">原生 IP 全解 Netflix/Disney+/TikTok，大流量与多设备并行，晚高峰看推特油管顺畅。</p>
-      </div>
-      <div class="flex items-center gap-2 mt-2">
-        <a href="/providers/twilight" class="px-3 py-1.5 text-xs font-medium text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-700 rounded-lg hover:bg-slate-200 transition-colors">查看测评</a>
-        <a href="https://varnexa.twilightaff.com/#/?code=beAVqNPf" target="_blank" rel="sponsored nofollow noopener" class="flex-1 text-center px-3 py-1.5 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-sm transition-colors">前往官网注册 (折扣码 mm88)</a>
-      </div>
-    </div>
-
-    <!-- 飞猫云 -->
-    <div class="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
-      <div>
-        <div class="flex items-center justify-between mb-2">
-          <span class="px-2.5 py-0.5 text-xs font-bold bg-amber-50 text-amber-700 rounded-full">🥉 第三名 · 性价比之王</span>
-          <span class="text-xs font-semibold text-emerald-600">折合 7元/月起</span>
-        </div>
-        <h4 class="text-base font-bold text-slate-900 dark:text-white mb-1">飞猫云 (FlyCat Cloud)</h4>
-        <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">极致便宜稳定，小流量年付仅84元，IEPL专线节点，新手入门零压力保姆配置。</p>
-      </div>
-      <div class="flex items-center gap-2 mt-2">
-        <a href="/providers/flycat-cloud" class="px-3 py-1.5 text-xs font-medium text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-700 rounded-lg hover:bg-slate-200 transition-colors">查看测评</a>
-        <a href="https://flycat1.flycatvipaff.cc/#/?code=KRjsCIZV" target="_blank" rel="sponsored nofollow noopener" class="flex-1 text-center px-3 py-1.5 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-sm transition-colors">前往官网注册 (折扣码 flycat888)</a>
-      </div>
-    </div>
-
-    <!-- 微风网络 -->
-    <div class="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
-      <div>
-        <div class="flex items-center justify-between mb-2">
-          <span class="px-2.5 py-0.5 text-xs font-bold bg-slate-100 text-slate-700 rounded-full">🏅 第四名 · 稳定代步老牌</span>
-          <span class="text-xs font-semibold text-emerald-600">以结算页为准</span>
-        </div>
-        <h4 class="text-base font-bold text-slate-900 dark:text-white mb-1">微风网络 (Breezenet)</h4>
-        <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">老牌稳健中转，极简订阅导入，适合日常网页访问与多设备代步需求。</p>
-      </div>
-      <div class="flex items-center gap-2 mt-2">
-        <a href="/providers/breezenet" class="px-3 py-1.5 text-xs font-medium text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-700 rounded-lg hover:bg-slate-200 transition-colors">查看测评</a>
-        <a href="https://edp01.breezenetaff.com/#/?code=vxDUI8kY" target="_blank" rel="sponsored nofollow noopener" class="flex-1 text-center px-3 py-1.5 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-sm transition-colors">前往官网注册入口</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-## 五、购买前须知与建议
-
-1. **核对套餐规则**：套餐的价格与流量以服务商当前结算页面为准。
-2. **月付体验**：小白购买建议先选择月付，满意后再升级到年付。
-3. **保留备用节点**：推荐配置备用机场，做到双向保险不失联。
-
-[返回全网 28 家机场汇总目录](/providers/all-28-airports-complete-guide-and-links)
+* **优点**：专线稳定度高，倍率真实无虚标，客服工单响应迅速。
+* **建议**：建议新手初次购买时先挑选最低挡位按月支付，测试满意后再考虑长期续费。

@@ -1,45 +1,51 @@
 ---
 title: "Clash Verge Rev 完整使用手册：功能设置、脚本重写与内核更新"
-description: "针对 Clash Verge Rev 完整使用手册：功能设置、脚本重写与内核更新 的 2026 专业深度实测与保姆级配置指南，涵盖技术原理拆解、跑分对比、常见坑点规避与高效科学上网选型方案。"
+description: "Clash Verge Rev 全面功能调优使用手册。涵括系统代理开关、TUN 模式挂载、Mihomo 内核切换、自定义 Script 拓展与日常维护。"
 pubDate: "2026-09-19"
 updatedDate: "2026-09-20"
 category: "客户端教程"
-tags: ["Clash教程", "机场实力榜", "客户端教程", "2026机场推荐"]
-keywords: ["Clash教程", "Shadowrocket配置", "Sing-box教学", "v2rayN使用"]
-search_synonyms: ["魔法上网", "梯子推荐", "翻墙机场", "科学上网", "IPLC专线", "4K秒开", "晚高峰不卡顿", "Clash教程", "Sing-box", "Shadowrocket", "节点测速"]
+tags: ["Clash Verge Rev", "使用手册", "Mihomo", "TUN模式", "客户端教程"]
+keywords: ["Clash Verge Rev使用教程", "Verge功能设置", "Mihomo内核升级", "Clash Verge调优"]
+search_synonyms: ["Clash Verge怎么设置", "Verge Rev完整手册", "Clash Verge参数说明"]
 featured: true
 ---
 
 # Clash Verge Rev 完整使用手册：功能设置、脚本重写与内核更新
 
-## Clash Verge Rev 完整使用手册：功能设置、脚本重写与内核更新 的核心功能与适用网络环境
-关于 Clash Verge Rev 完整使用手册：功能设置、脚本重写与内核更新 的实际使用需求，理清客户端的协议内核与系统网络接管权限是首要基础。本指南将为你展开系统拆解。
+Clash Verge Rev 是目前 Windows、macOS 与 Linux 平台上最受欢迎的现代化代理客户端。它不仅继承了直观的 GUI 界面，还深度整合了 Mihomo 内核的高级分流特性。
 
-## 使用 Clash Verge Rev 完整使用手册：功能设置、脚本重写与内核更新 前的准备工作与系统权限放行
-建议从 GitHub 官方 Release 页面或正版商店获取安装包。安装后须放行系统防火墙与创建虚拟网卡 (VPN/TUN) 授权，并确保电脑/手机时间与标准北京时间同步。
+本手册将从基础操作到进阶配置，为你全面拆解这款软件的核心功能模块。
 
-## Clash Verge Rev 完整使用手册：功能设置、脚本重写与内核更新 的核心操作流程：订阅导入与规则分流
-1. 登录自营机场后台（如 [灵动云](/providers/lingdong-cloud) 或 [暮光网络](/providers/twilight)）复制订阅 URL。
-2. 打开客户端添加 Profiles 配置并拉取节点。
-3. 保持选择 Rule 规则模式，开启国内流量直连放行、国外流量走代理。
+---
 
-## Clash Verge Rev 完整使用手册：功能设置、脚本重写与内核更新 进阶配置：开启 TUN 模式与防止 DNS 泄漏
-若需要让终端命令行、Git 或外服游戏走代理，在软件中开启 TUN 虚拟网卡模式。TUN 模式将挂载底栈网卡，强制接管全盘 TCP/UDP 流量。
+## 一、主界面核心菜单与基础配置
 
-## Clash Verge Rev 完整使用手册：功能设置、脚本重写与内核更新 核心参数与全平台客户端支持横向对比
-以下为 Clash Verge Rev 完整使用手册：功能设置、脚本重写与内核更新 在主流操作系统中的兼容性与内核表现：
+1. **代理 (Proxies)**：
+   * **运行模式**：提供了 Rule (规则分流)、Global (全局代理) 与 Direct (直接连接) 三种模式。
+   * **延迟测试**：点击右上角闪电图标可一键对当前配置下的所有节点发起 HTTP 延迟测速。
+2. **订阅 (Profiles)**：
+   * 支持通过远程 URL 导入或本地 YAML 拖入添加配置。
+   * 鼠标右键点击订阅卡片，可设置自动定时更新周期（建议设置为 24 小时）。
 
-## 针对 Clash Verge Rev 完整使用手册：功能设置、脚本重写与内核更新 的节点选择与落地 IP 解锁优化
-在日常使用时，若遇到 ChatGPT 1020 报错或 Netflix 无法播放，建议在节点列表中优先切换至住宅 Native 原生 IP 线路。
+---
 
-## Clash Verge Rev 完整使用手册：功能设置、脚本重写与内核更新 常见连接故障与节点超时排查 FAQ
-遇到节点全部 Timeout，优先点开系统时间自动同步。出现端口 7890 占用时，在任务管理器中结束旧进程。
+## 二、系统代理与 TUN 模式极速切换
 
-| 客户端软件名称 | 适用操作系统 | 核心代理内核 | TUN 模式支持 | 分流重写支持 | 适合用户类型 |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Clash Verge Rev** | Windows / macOS | Mihomo (Meta) | 支持 (一键勾选) | 支持 JS / YAML 扩展 | 追赶最新协议与桌面端首选 |
-| **Sing-box GUI** | 全平台 (Win/Mac/iOS/Android) | Sing-box 原生 | 支持 | 支持 JSON 规则集 | 追求极低内存占用与 Hy2 用户 |
-| **Shadowrocket (小火箭)** | iOS / iPadOS | 自研高效内核 | 支持 | 支持 JS 重写与去广告 | iPhone 苹果手机必备神器 |
+* **系统代理 (System Proxy)**：开启后软件会自动写入 Windows 系统的网络代理设置，接管浏览器和大部分常见软件的网页访问。
+* **TUN 模式 (TUN Mode)**：对于命令行、Git 终端、Steam 客户端等不遵循系统代理的应用，须在设置中安装服务模式并开启 TUN 模式。TUN 模式将挂载 Wintun 虚拟网卡，实现全盘数据包级的接管。
 
-掌握 Clash Verge Rev 完整使用手册：功能设置、脚本重写与内核更新 的正确方法后，选择稳定的自营专线机场（如 [灵动云](/providers/lingdong-cloud)），即可畅享无界访问。
+---
 
+## 三、扩展脚本 (Merge Script) 进阶规则重写
+
+Clash Verge Rev 允许用户在不直接修改机场原订阅 YAML 的情况下，通过内建的 JavaScript 脚本对规则进行无缝重写：
+
+1. 进入 订阅 (Profiles) 页面，选择顶部的 扩展脚本 (Scripts)。
+2. 点击新建脚本，选择自定义 JS 逻辑：将个人自定义直连和代理规则注入在机场原始规则最前端。
+3. 将脚本绑定至对应的机场订阅，每次拉取更新时系统会自动应用该拓展规则。
+
+---
+
+## 四、内核更新与常见故障自检
+
+进入设置页面，可以检查并升级底层的 Mihomo (Clash Meta) 内核。遇到节点无法连接或启动报错时，建议先检查端口 7890 是否被其他代理软件占用，或尝试在系统服务管理中重启 clash_verge_service 服务。

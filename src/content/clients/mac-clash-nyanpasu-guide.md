@@ -1,42 +1,40 @@
 ---
 title: "Clash Nyanpasu Mac/Windows 教程：颜值最高的新一代代理客户端"
-description: "针对 Clash Nyanpasu Mac/Windows 教程：颜值最高的新一代代理客户端 的 2026 专业深度实测与保姆级配置指南，涵盖技术原理拆解、跑分对比、常见坑点规避与高效科学上网选型方案。"
+description: "Clash Nyanpasu 高颜值客户端图文教程。基于 Tauri 与 Mihomo 内核，涵盖 macOS 与 Windows 版界面定制、订阅导入与 TUN 模式开启。"
 pubDate: "2026-09-19"
 updatedDate: "2026-09-20"
 category: "客户端教程"
-tags: ["Clash教程", "机场实力榜", "客户端教程", "2026机场推荐"]
-keywords: ["Clash教程", "Shadowrocket配置", "Sing-box教学", "v2rayN使用"]
-search_synonyms: ["魔法上网", "梯子推荐", "翻墙机场", "科学上网", "IPLC专线", "4K秒开", "晚高峰不卡顿", "Clash教程", "Sing-box", "Shadowrocket", "节点测速"]
+tags: ["Clash Nyanpasu", "Mac科学上网", "高颜值客户端", "Mihomo", "客户端教程"]
+keywords: ["Clash Nyanpasu教程", "Mac最高颜值Clash", "Nyanpasu配置", "Tauri代理软件"]
+search_synonyms: ["Nyanpasu怎么用", "Mac好看的Clash", "Clash Nyanpasu设置"]
 featured: true
 ---
 
 # Clash Nyanpasu Mac/Windows 教程：颜值最高的新一代代理客户端
 
-## Clash Nyanpasu Mac/Windows 教程：颜值最高的新一代代理客户端 的核心功能与适用网络环境
-关于 Clash Nyanpasu Mac/Windows 教程：颜值最高的新一代代理客户端 的实际使用需求，理清客户端的协议内核与系统网络接管权限是首要基础。本指南将为你展开系统拆解。
+如果你对传统代理客户端单调的界面感到审美疲劳，**Clash Nyanpasu** 绝对会让你眼前一亮。作为一款基于 Rust + Tauri 框架开发的新一代开源客户端，它拥有极其精致的喵咪动画主题、现代化的 UI 交互设计，并原生整合了高性能的 Mihomo 内核。
 
-## 使用 Clash Nyanpasu Mac/Windows 教程：颜值最高的新一代代理客户端 前的准备工作与系统权限放行
-建议从 GitHub 官方 Release 页面或正版商店获取安装包。安装后须放行系统防火墙与创建虚拟网卡 (VPN/TUN) 授权，并确保电脑/手机时间与标准北京时间同步。
+本文将为你带来 macOS 与 Windows 系统下 Clash Nyanpasu 的完整配置使用指南。
 
-## Clash Nyanpasu Mac/Windows 教程：颜值最高的新一代代理客户端 的核心操作流程：订阅导入与规则分流
-1. 登录自营机场后台（如 [灵动云](/providers/lingdong-cloud) 或 [暮光网络](/providers/twilight)）复制订阅 URL。
-2. 打开客户端添加 Profiles 配置并拉取节点。
-3. 保持选择 Rule 规则模式，开启国内流量直连放行、国外流量走代理。
+---
 
-## Clash Nyanpasu Mac/Windows 教程：颜值最高的新一代代理客户端 进阶配置：开启 TUN 模式与防止 DNS 泄漏
-若需要让终端命令行、Git 或外服游戏走代理，在软件中开启 TUN 虚拟网卡模式。TUN 模式将挂载底栈网卡，强制接管全盘 TCP/UDP 流量。
+## 一、软件下载与系统权限安装
 
-## Clash Nyanpasu Mac/Windows 教程：颜值最高的新一代代理客户端 核心参数与全平台客户端支持横向对比
-以下为 Clash Nyanpasu Mac/Windows 教程：颜值最高的新一代代理客户端 在主流操作系统中的兼容性与内核表现：
+1. 从官方 GitHub Release 页面下载安装包（macOS 用户根据芯片架构选择 Apple Silicon 的 arm64 安装包 或 Intel 的 x64 安装包）。
+2. 将应用程序拖入 Mac 的 Applications 文件夹中。
+3. 首次启动时，若提示安全拦截，进入 macOS 系统设置 -> 隐私与安全性 点击“仍要打开”。
 
-## Clash Nyanpasu Mac/Windows 教程：颜值最高的新一代代理客户端 常见连接故障与节点超时排查 FAQ
-遇到节点全部 Timeout，优先点开系统时间自动同步。出现端口 7890 占用时，在任务管理器中结束旧进程。
+---
 
-| 客户端软件名称 | 适用操作系统 | 核心代理内核 | TUN 模式支持 | 分流重写支持 | 适合用户类型 |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Clash Verge Rev** | Windows / macOS | Mihomo (Meta) | 支持 (一键勾选) | 支持 JS / YAML 扩展 | 追赶最新协议与桌面端首选 |
-| **Sing-box GUI** | 全平台 (Win/Mac/iOS/Android) | Sing-box 原生 | 支持 | 支持 JSON 规则集 | 追求极低内存占用与 Hy2 用户 |
-| **Shadowrocket (小火箭)** | iOS / iPadOS | 自研高效内核 | 支持 | 支持 JS 重写与去广告 | iPhone 苹果手机必备神器 |
+## 二、导入机场订阅与模式切换
 
-掌握 Clash Nyanpasu Mac/Windows 教程：颜值最高的新一代代理客户端 的正确方法后，选择稳定的自营专线机场（如 [灵动云](/providers/lingdong-cloud)），即可畅享无界访问。
+1. **导入配置**：点击左侧侧边栏的 Profiles 图标，在顶部输入框中粘贴你的机场 Clash 订阅链接，点击 Import。
+2. **激活配置**：导入成功后，鼠标单击对应的订阅卡片，使其左侧边框高亮显示。
+3. **选择分流模式**：进入 Proxies 菜单，在顶部切换为 Rule (规则) 模式。在软件底部开启 System Proxy (系统代理)。
 
+---
+
+## 三、开启 TUN 模式与主界面喵咪主题定制
+
+* **开启 TUN 模式**：在 Settings 页面中找到 TUN Mode 选项，点击安装 Service 提权。开启后，软件将自动拦截终端命令行与后台应用的非标准端口网络。
+* **界面主题定制**：在 Settings 的 Appearance 选项中，可以随意切换多种色彩主题与动画壁纸，让网络管理变得美观优雅。

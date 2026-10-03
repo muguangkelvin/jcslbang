@@ -1,42 +1,77 @@
 ---
 title: "Sing-box 移动端 iOS/Android 极速指南：下一代通用内核体验"
-description: "针对 Sing-box 移动端 iOS/Android 极速指南：下一代通用内核体验 的 2026 专业深度实测与保姆级配置指南，涵盖技术原理拆解、跑分对比、常见坑点规避与高效科学上网选型方案。"
-pubDate: "2026-09-19"
-updatedDate: "2026-09-20"
-category: "客户端教程"
-tags: ["Clash教程", "机场实力榜", "客户端教程", "2026机场推荐"]
-keywords: ["Clash教程", "Shadowrocket配置", "Sing-box教学", "v2rayN使用"]
-search_synonyms: ["魔法上网", "梯子推荐", "翻墙机场", "科学上网", "IPLC专线", "4K秒开", "晚高峰不卡顿", "Clash教程", "Sing-box", "Shadowrocket", "节点测速"]
-featured: true
+description: "详细指导如何在 iPhone (iOS) 与安卓 (Android) 手机上快速下载、配置并使用 Sing-box 移动端应用，享受低功耗与极速分流。"
+pubDate: 2024-04-06
+category: "clients"
+tags: ["Sing-box", "iOS", "Android", "移动端配置", "客户端教程"]
 ---
 
-# Sing-box 移动端 iOS/Android 极速指南：下一代通用内核体验
+在智能手机端，**Sing-box 移动客户端** 凭藉其**比传统代理应用节省高达 40% 的手机电量、内存占用极低**以及原生支持 Hysteria 2 / VLESS Reality 等优点，正在成为无数极客用户的手机必备软件。
 
-## Sing-box 移动端 iOS/Android 极速指南：下一代通用内核体验 的核心功能与适用网络环境
-关于 Sing-box 移动端 iOS/Android 极速指南：下一代通用内核体验 的实际使用需求，理清客户端的协议内核与系统网络接管权限是首要基础。本指南将为你展开系统拆解。
+本文将针对 iOS 和 Android 两大系统，为你带来零基础移动端极速上手指南。
 
-## 使用 Sing-box 移动端 iOS/Android 极速指南：下一代通用内核体验 前的准备工作与系统权限放行
-建议从 GitHub 官方 Release 页面或正版商店获取安装包。安装后须放行系统防火墙与创建虚拟网卡 (VPN/TUN) 授权，并确保电脑/手机时间与标准北京时间同步。
+---
 
-## Sing-box 移动端 iOS/Android 极速指南：下一代通用内核体验 的核心操作流程：订阅导入与规则分流
-1. 登录自营机场后台（如 [灵动云](/providers/lingdong-cloud) 或 [暮光网络](/providers/twilight)）复制订阅 URL。
-2. 打开客户端添加 Profiles 配置并拉取节点。
-3. 保持选择 Rule 规则模式，开启国内流量直连放行、国外流量走代理。
+## iOS 与 Android 双端下载获取方式
 
-## Sing-box 移动端 iOS/Android 极速指南：下一代通用内核体验 进阶配置：开启 TUN 模式与防止 DNS 泄漏
-若需要让终端命令行、Git 或外服游戏走代理，在软件中开启 TUN 虚拟网卡模式。TUN 模式将挂载底栈网卡，强制接管全盘 TCP/UDP 流量。
+在开始配置前，请从官方正规渠道获取手机应用：
 
-## Sing-box 移动端 iOS/Android 极速指南：下一代通用内核体验 核心参数与全平台客户端支持横向对比
-以下为 Sing-box 移动端 iOS/Android 极速指南：下一代通用内核体验 在主流操作系统中的兼容性与内核表现：
+| 手机系统平台 | 软件下载渠道 | 费用与说明 |
+| :--- | :--- | :--- |
+| **iPhone / iPad (iOS)** | 海外区 App Store 搜索 **Sing-box** | 免费下载 (需美区/港区 Apple ID) |
+| **Android (安卓系统)** | [GitHub Releases](https://github.com/SagerNet/sing-box) 或 Google Play | 开源免费，提供 .apk 原生安装包 |
 
-## Sing-box 移动端 iOS/Android 极速指南：下一代通用内核体验 常见连接故障与节点超时排查 FAQ
-遇到节点全部 Timeout，优先点开系统时间自动同步。出现端口 7890 占用时，在任务管理器中结束旧进程。
+---
 
-| 客户端软件名称 | 适用操作系统 | 核心代理内核 | TUN 模式支持 | 分流重写支持 | 适合用户类型 |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Clash Verge Rev** | Windows / macOS | Mihomo (Meta) | 支持 (一键勾选) | 支持 JS / YAML 扩展 | 追赶最新协议与桌面端首选 |
-| **Sing-box GUI** | 全平台 (Win/Mac/iOS/Android) | Sing-box 原生 | 支持 | 支持 JSON 规则集 | 追求极低内存占用与 Hy2 用户 |
-| **Shadowrocket (小火箭)** | iOS / iPadOS | 自研高效内核 | 支持 | 支持 JS 重写与去广告 | iPhone 苹果手机必备神器 |
+## 步骤一：向移动端导入机场订阅 Profile
 
-掌握 Sing-box 移动端 iOS/Android 极速指南：下一代通用内核体验 的正确方法后，选择稳定的自营专线机场（如 [灵动云](/providers/lingdong-cloud)），即可畅享无界访问。
+```mermaid
+flowchart TD
+    A[复制机场后台 Sing-box / Universal 订阅 URL] --> B[打开 Sing-box 手机 App]
+    B --> C[切换到 Profiles 配置标签页]
+    C --> D[点击 Add Profile / Create Profile]
+    D --> E[粘贴 URL 并拉取保存节点配置]
+```
 
+1. 在手机浏览器中登录机场后台，复制专属的 **Sing-box 订阅链接**。
+2. 打开 Sing-box App，点击底栏的 **“Profiles” (配置)**。
+3. 点击右上角的 **+** 按钮：
+   - **Name (名称)**：任意输入机场名称。
+   - **Type (类型)**：选择 **Remote (远程订阅)**。
+   - **URL**：粘贴复制好的订阅链接。
+4. 点击右上角的 **Create / Save** 按钮，应用会自动下载并解析配置文件。
+
+---
+
+## 步骤二：开启 TUN VPN 权限并启动连接
+
+1. 切换回 App 首页的 **“Dashboard” (控制台)** 标签页。
+2. 在 Profile 下拉菜单中，选择刚下载好的配置文件。
+3. 点击主界面的 **“Enable” (启动开关)**。
+4. **系统授权提示**：
+   - **iOS 用户**：系统会弹窗要求添加 VPN 配置，点击“允许”并输入 iPhone 锁屏密码。
+   - **Android 用户**：系统提示“Sing-box 申请建立 VPN 连接”，点击“确定”。
+
+---
+
+## 移动端省电与后台保活设置
+
+为防止 Sing-box 在手机后台被安卓系统杀掉或导致耗电异常：
+- **安卓系统设置**：在手机【设置 -> 应用管理 -> Sing-box】中，将电池优化改为 **“无限制/允许后台运行”**，并开启“自启动”权限。
+- **iOS 系统设置**：在【设置 -> Sing-box】中保持 **“后台 App 刷新”** 开启即可。
+
+---
+
+## Sing-box 移动端常见问题 (FAQ)
+
+### Q1：为什么在 Sing-box 手机界面看不到手动切换节点的按钮？
+由于 Sing-box 官方原版 App 界面极其精简，默认按照配置文件预设的自动选路模式运行。如果需要手动点选节点，建议导入支持 Selector 手动选择组的高级 JSON 订阅。
+
+### Q2：手机连接科学上网后，微信图片接收变慢怎么办？
+请检查你的路由配置是否开启了国内流量直连 (GEOIP CN -> DIRECT)。只要国内流量走直连，微信和本地应用速度就不会受到任何影响。
+
+---
+
+## Sing-box 移动端使用总结
+
+Sing-box 移动端完美解决了科学上网工具在手机上发热严重与耗电快的痛点。只需简单导入订阅并开启 VPN 授权，就能在手机上享受安全稳定、无感智能分流的网络体验。

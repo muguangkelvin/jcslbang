@@ -1,42 +1,36 @@
 ---
 title: "Quantumult X (圈X) iOS 高级教程：分流规则、脚本重写与订阅"
-description: "针对 Quantumult X (圈X) iOS 高级教程：分流规则、脚本重写与订阅 的 2026 专业深度实测与保姆级配置指南，涵盖技术原理拆解、跑分对比、常见坑点规避与高效科学上网选型方案。"
+description: "iOS 端顶级代理软件 Quantumult X (圈X) 高级图文教程。演示节点订阅添加、Rewrite 脚本注入、MITM 证书安装与规则重写。"
 pubDate: "2026-09-19"
 updatedDate: "2026-09-20"
 category: "客户端教程"
-tags: ["Clash教程", "机场实力榜", "客户端教程", "2026机场推荐"]
-keywords: ["Clash教程", "Shadowrocket配置", "Sing-box教学", "v2rayN使用"]
-search_synonyms: ["魔法上网", "梯子推荐", "翻墙机场", "科学上网", "IPLC专线", "4K秒开", "晚高峰不卡顿", "Clash教程", "Sing-box", "Shadowrocket", "节点测速"]
+tags: ["Quantumult X", "圈X教程", "iOS代理", "Rewrite脚本", "客户端教程"]
+keywords: ["Quantumult X教程", "圈X使用指南", "QuanX订阅导入", "QuanX Rewrite脚本"]
+search_synonyms: ["圈X怎么导入节点", "Quantumult X证书安装", "iOS圈X配置"]
 featured: true
 ---
 
 # Quantumult X (圈X) iOS 高级教程：分流规则、脚本重写与订阅
 
-## Quantumult X (圈X) iOS 高级教程：分流规则、脚本重写与订阅 的核心功能与适用网络环境
-关于 Quantumult X (圈X) iOS 高级教程：分流规则、脚本重写与订阅 的实际使用需求，理清客户端的协议内核与系统网络接管权限是首要基础。本指南将为你展开系统拆解。
+在 Apple iOS 平台上，**Quantumult X (简称 圈X)** 凭借其强大的网络重写 (Rewrite) 能力、极其灵活的自定义策略组以及优异的吞吐性能，被誉为 iOS 代理软件的“终极神器”。
 
-## 使用 Quantumult X (圈X) iOS 高级教程：分流规则、脚本重写与订阅 前的准备工作与系统权限放行
-建议从 GitHub 官方 Release 页面或正版商店获取安装包。安装后须放行系统防火墙与创建虚拟网卡 (VPN/TUN) 授权，并确保电脑/手机时间与标准北京时间同步。
+本文将演示 Quantumult X 的节点导入、MITM 证书安装与规则配置全流程。
 
-## Quantumult X (圈X) iOS 高级教程：分流规则、脚本重写与订阅 的核心操作流程：订阅导入与规则分流
-1. 登录自营机场后台（如 [灵动云](/providers/lingdong-cloud) 或 [暮光网络](/providers/twilight)）复制订阅 URL。
-2. 打开客户端添加 Profiles 配置并拉取节点。
-3. 保持选择 Rule 规则模式，开启国内流量直连放行、国外流量走代理。
+---
 
-## Quantumult X (圈X) iOS 高级教程：分流规则、脚本重写与订阅 进阶配置：开启 TUN 模式与防止 DNS 泄漏
-若需要让终端命令行、Git 或外服游戏走代理，在软件中开启 TUN 虚拟网卡模式。TUN 模式将挂载底栈网卡，强制接管全盘 TCP/UDP 流量。
+## 一、添加节点订阅与策略组配置
 
-## Quantumult X (圈X) iOS 高级教程：分流规则、脚本重写与订阅 核心参数与全平台客户端支持横向对比
-以下为 Quantumult X (圈X) iOS 高级教程：分流规则、脚本重写与订阅 在主流操作系统中的兼容性与内核表现：
+1. 打开 Quantumult X，点击右下角 **小风车图标** 进入设置菜单。
+2. 找到 **节点 (Server) -> 引用 (Resource)**，点击右上角加号 (+)。
+3. 在 URL 框中粘贴机场提供的 Quantumult X 专用订阅链接，填写别名后点击保存。
+4. 回到首页，按住中间的展开按钮，可以手动在不同节点与自定义策略组之间自由切换。
 
-## Quantumult X (圈X) iOS 高级教程：分流规则、脚本重写与订阅 常见连接故障与节点超时排查 FAQ
-遇到节点全部 Timeout，优先点开系统时间自动同步。出现端口 7890 占用时，在任务管理器中结束旧进程。
+---
 
-| 客户端软件名称 | 适用操作系统 | 核心代理内核 | TUN 模式支持 | 分流重写支持 | 适合用户类型 |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Clash Verge Rev** | Windows / macOS | Mihomo (Meta) | 支持 (一键勾选) | 支持 JS / YAML 扩展 | 追赶最新协议与桌面端首选 |
-| **Sing-box GUI** | 全平台 (Win/Mac/iOS/Android) | Sing-box 原生 | 支持 | 支持 JSON 规则集 | 追求极低内存占用与 Hy2 用户 |
-| **Shadowrocket (小火箭)** | iOS / iPadOS | 自研高效内核 | 支持 | 支持 JS 重写与去广告 | iPhone 苹果手机必备神器 |
+## 二、配置 MITM 根证书与 Rewrite 脚本重写
 
-掌握 Quantumult X (圈X) iOS 高级教程：分流规则、脚本重写与订阅 的正确方法后，选择稳定的自营专线机场（如 [灵动云](/providers/lingdong-cloud)），即可畅享无界访问。
+要使用圈X去除应用广告或自动执行脚本，必须开启 **MITM (中间人解密)** 权限：
 
+1. 在设置中找到 **MITM** 菜单，点击 **生成证书 (Generate Certificate)**。
+2. 点击 **安装证书**，系统会自动跳转至 iOS 设置，在 通用 -> 关于本机 -> 证书信任设置 中，找到 Quantumult X 根证书并开启“完全信任”。
+3. 在 **Rewrite (重写)** 菜单中添加远程规则集，即可实现针对复杂网页与 App 流量的精准过滤。

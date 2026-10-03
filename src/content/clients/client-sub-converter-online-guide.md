@@ -1,42 +1,49 @@
 ---
 title: "订阅转换 (Subconverter) 在线工具使用教程：SSR/V2Ray/Clash/Sing-box 互相转换"
-description: "针对 订阅转换 (Subconverter) 在线工具使用教程：SSR/V2Ray/Clash/Sing-box 互相转换 的 2026 专业深度实测与保姆级配置指南，涵盖技术原理拆解、跑分对比、常见坑点规避与高效科学上网选型方案。"
+description: "Subconverter 订阅转换工具全面教程。教你将 SSR、v2rayN、Shadowrocket 链接一键转换为 Clash YAML 或 Sing-box JSON 格式。"
 pubDate: "2026-09-19"
 updatedDate: "2026-09-20"
 category: "客户端教程"
-tags: ["Clash教程", "机场实力榜", "客户端教程", "2026机场推荐"]
-keywords: ["Clash教程", "Shadowrocket配置", "Sing-box教学", "v2rayN使用"]
-search_synonyms: ["魔法上网", "梯子推荐", "翻墙机场", "科学上网", "IPLC专线", "4K秒开", "晚高峰不卡顿", "Clash教程", "Sing-box", "Shadowrocket", "节点测速"]
+tags: ["订阅转换", "Subconverter", "Clash转换", "Sing-box", "客户端教程"]
+keywords: ["Subconverter教程", "订阅转换在线", "V2Ray转Clash", "Sing-box订阅转换"]
+search_synonyms: ["机场节点转换", "Clash订阅在线转换", "SSR转Clash格式"]
 featured: true
 ---
 
 # 订阅转换 (Subconverter) 在线工具使用教程：SSR/V2Ray/Clash/Sing-box 互相转换
 
-## 订阅转换 (Subconverter) 在线工具使用教程：SSR/V2Ray/Clash/Sing-box 互相转换 的核心功能与适用网络环境
-关于 订阅转换 (Subconverter) 在线工具使用教程：SSR/V2Ray/Clash/Sing-box 互相转换 的实际使用需求，理清客户端的协议内核与系统网络接管权限是首要基础。本指南将为你展开系统拆解。
+不同科学上网代理客户端使用的配置文件语法存在巨大差异。例如，旧版 v2rayN 使用 Base64 编码字符串，Clash 采用 YAML 语法，而 Sing-box 则采用 JSON 结构。如果你购买的机场只提供了旧版通用链接，就需要借助 **Subconverter (订阅转换工具)** 将其转换为对应客户端能识别的格式。
 
-## 使用 订阅转换 (Subconverter) 在线工具使用教程：SSR/V2Ray/Clash/Sing-box 互相转换 前的准备工作与系统权限放行
-建议从 GitHub 官方 Release 页面或正版商店获取安装包。安装后须放行系统防火墙与创建虚拟网卡 (VPN/TUN) 授权，并确保电脑/手机时间与标准北京时间同步。
+本文将介绍订阅转换的技术原理、使用流程与隐私安全避坑原则。
 
-## 订阅转换 (Subconverter) 在线工具使用教程：SSR/V2Ray/Clash/Sing-box 互相转换 的核心操作流程：订阅导入与规则分流
-1. 登录自营机场后台（如 [灵动云](/providers/lingdong-cloud) 或 [暮光网络](/providers/twilight)）复制订阅 URL。
-2. 打开客户端添加 Profiles 配置并拉取节点。
-3. 保持选择 Rule 规则模式，开启国内流量直连放行、国外流量走代理。
+---
 
-## 订阅转换 (Subconverter) 在线工具使用教程：SSR/V2Ray/Clash/Sing-box 互相转换 进阶配置：开启 TUN 模式与防止 DNS 泄漏
-若需要让终端命令行、Git 或外服游戏走代理，在软件中开启 TUN 虚拟网卡模式。TUN 模式将挂载底栈网卡，强制接管全盘 TCP/UDP 流量。
+## 1. 订阅转换的核心原理与语法对照
 
-## 订阅转换 (Subconverter) 在线工具使用教程：SSR/V2Ray/Clash/Sing-box 互相转换 核心参数与全平台客户端支持横向对比
-以下为 订阅转换 (Subconverter) 在线工具使用教程：SSR/V2Ray/Clash/Sing-box 互相转换 在主流操作系统中的兼容性与内核表现：
+Subconverter 会拉取原始链接中的节点服务器参数（包括服务器地址、端口、密钥、传输协议），并结合预设的分流规则模板，将其重新渲染打包为目标软件的格式。
 
-## 订阅转换 (Subconverter) 在线工具使用教程：SSR/V2Ray/Clash/Sing-box 互相转换 常见连接故障与节点超时排查 FAQ
-遇到节点全部 Timeout，优先点开系统时间自动同步。出现端口 7890 占用时，在任务管理器中结束旧进程。
+| 目标客户端 | 所需文件格式 | 关键转换配置选项 |
+| :--- | :--- | :--- |
+| **Clash / Clash Verge Rev** | YAML 格式 | 输出类型选择 Clash 或 Clash Meta |
+| **Sing-box** | JSON 格式 | 输出类型选择 Sing-box |
+| **Shadowrocket (小火箭)** | Base64 / URL | 输出类型选择 Shadowrocket |
+| **Quantumult X** | Conf / Snippet | 输出类型选择 QuanX |
 
-| 客户端软件名称 | 适用操作系统 | 核心代理内核 | TUN 模式支持 | 分流重写支持 | 适合用户类型 |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Clash Verge Rev** | Windows / macOS | Mihomo (Meta) | 支持 (一键勾选) | 支持 JS / YAML 扩展 | 追赶最新协议与桌面端首选 |
-| **Sing-box GUI** | 全平台 (Win/Mac/iOS/Android) | Sing-box 原生 | 支持 | 支持 JSON 规则集 | 追求极低内存占用与 Hy2 用户 |
-| **Shadowrocket (小火箭)** | iOS / iPadOS | 自研高效内核 | 支持 | 支持 JS 重写与去广告 | iPhone 苹果手机必备神器 |
+---
 
-掌握 订阅转换 (Subconverter) 在线工具使用教程：SSR/V2Ray/Clash/Sing-box 互相转换 的正确方法后，选择稳定的自营专线机场（如 [灵动云](/providers/lingdong-cloud)），即可畅享无界访问。
+## 2. 在线订阅转换的三步实操流程
 
+1. **获取原始订阅**：登录机场后台，复制原始的通用订阅 URL。
+2. **填写转换参数**：
+   * 打开可信的订阅转换前端界面（如 sub.id9.cc 或自建 Subconverter 前端）。
+   * 在订阅链接输入框中粘贴原始 URL。
+   * 在客户端类型下拉菜单中选择你的目标软件（如 Clash）。
+   * 在远程规则集中选择预设的规则模板（如 ACL4SSR 基础版 或 默认规则）。
+3. **生成并复制新链接**：点击生成订阅链接，复制新生成的转换 URL，并填入客户端中拉取节点。
+
+---
+
+## 3. 订阅转换隐私安全与自建托管建议
+
+* **防范 Token 泄露**：公共订阅转换服务器的后台运营者理论上有能力获取你的订阅 Token。请勿在不知名的第三方小网站进行转换。
+* **优先选择自建 Subconverter**：对隐私要求高的用户，建议利用 Docker 在本地电脑或个人 VPS 上自建 Subconverter 服务，彻底消除 Token 被盗用的风险。

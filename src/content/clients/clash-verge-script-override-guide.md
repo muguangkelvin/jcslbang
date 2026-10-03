@@ -1,42 +1,40 @@
 ---
 title: "Clash Verge Rev 扩展脚本 (Script) 配置教程：自定义规则重写"
-description: "针对 Clash Verge Rev 扩展脚本 (Script) 配置教程：自定义规则重写 的 2026 专业深度实测与保姆级配置指南，涵盖技术原理拆解、跑分对比、常见坑点规避与高效科学上网选型方案。"
+description: "教你使用 Clash Verge Rev 的扩展脚本 (Script Profile) 功能。利用 JavaScript 动态修改配置、添加自定义节点组与屏蔽广告域名。"
 pubDate: "2026-09-19"
 updatedDate: "2026-09-20"
 category: "客户端教程"
-tags: ["Clash教程", "机场实力榜", "客户端教程", "2026机场推荐"]
-keywords: ["Clash教程", "Shadowrocket配置", "Sing-box教学", "v2rayN使用"]
-search_synonyms: ["魔法上网", "梯子推荐", "翻墙机场", "科学上网", "IPLC专线", "4K秒开", "晚高峰不卡顿", "Clash教程", "Sing-box", "Shadowrocket", "节点测速"]
+tags: ["Clash Verge", "扩展脚本", "JavaScript重写", "自定义规则", "客户端教程"]
+keywords: ["Clash Verge脚本教程", "Verge Script配置", "Clash规则重写", "JavaScript预处理"]
+search_synonyms: ["Verge怎么加自定义规则", "Clash Verge预处理脚本", "Verge合并配置"]
 featured: true
 ---
 
 # Clash Verge Rev 扩展脚本 (Script) 配置教程：自定义规则重写
 
-## Clash Verge Rev 扩展脚本 (Script) 配置教程：自定义规则重写 的核心功能与适用网络环境
-关于 Clash Verge Rev 扩展脚本 (Script) 配置教程：自定义规则重写 的实际使用需求，理清客户端的协议内核与系统网络接管权限是首要基础。本指南将为你展开系统拆解。
+每次机场更新订阅时，原有的配置文件都会被全新拉取的 YAML 文件覆盖，导致用户之前手动添加的自定义直连规则、广告拦截域名或本地节点全部丢失。为了解决这一痛点，Clash Verge Rev 引入了 **扩展脚本 (Script Override)** 功能。
 
-## 使用 Clash Verge Rev 扩展脚本 (Script) 配置教程：自定义规则重写 前的准备工作与系统权限放行
-建议从 GitHub 官方 Release 页面或正版商店获取安装包。安装后须放行系统防火墙与创建虚拟网卡 (VPN/TUN) 授权，并确保电脑/手机时间与标准北京时间同步。
+扩展脚本允许用户通过编写极简的 JavaScript 代码，在订阅解析时自动把自定义配置“注入”到最终生效的文件中。
 
-## Clash Verge Rev 扩展脚本 (Script) 配置教程：自定义规则重写 的核心操作流程：订阅导入与规则分流
-1. 登录自营机场后台（如 [灵动云](/providers/lingdong-cloud) 或 [暮光网络](/providers/twilight)）复制订阅 URL。
-2. 打开客户端添加 Profiles 配置并拉取节点。
-3. 保持选择 Rule 规则模式，开启国内流量直连放行、国外流量走代理。
+---
 
-## Clash Verge Rev 扩展脚本 (Script) 配置教程：自定义规则重写 进阶配置：开启 TUN 模式与防止 DNS 泄漏
-若需要让终端命令行、Git 或外服游戏走代理，在软件中开启 TUN 虚拟网卡模式。TUN 模式将挂载底栈网卡，强制接管全盘 TCP/UDP 流量。
+## 1. 扩展脚本的工作机制
 
-## Clash Verge Rev 扩展脚本 (Script) 配置教程：自定义规则重写 核心参数与全平台客户端支持横向对比
-以下为 Clash Verge Rev 扩展脚本 (Script) 配置教程：自定义规则重写 在主流操作系统中的兼容性与内核表现：
+扩展脚本相当于一个位于“订阅下载”与“软件加载”之间的中转过滤器。只要脚本存在，不论机场订阅如何频繁刷新，你的个人定制规则都会始终稳固生效。
 
-## Clash Verge Rev 扩展脚本 (Script) 配置教程：自定义规则重写 常见连接故障与节点超时排查 FAQ
-遇到节点全部 Timeout，优先点开系统时间自动同步。出现端口 7890 占用时，在任务管理器中结束旧进程。
+---
 
-| 客户端软件名称 | 适用操作系统 | 核心代理内核 | TUN 模式支持 | 分流重写支持 | 适合用户类型 |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Clash Verge Rev** | Windows / macOS | Mihomo (Meta) | 支持 (一键勾选) | 支持 JS / YAML 扩展 | 追赶最新协议与桌面端首选 |
-| **Sing-box GUI** | 全平台 (Win/Mac/iOS/Android) | Sing-box 原生 | 支持 | 支持 JSON 规则集 | 追求极低内存占用与 Hy2 用户 |
-| **Shadowrocket (小火箭)** | iOS / iPadOS | 自研高效内核 | 支持 | 支持 JS 重写与去广告 | iPhone 苹果手机必备神器 |
+## 2. 实用扩展脚本编写范例
 
-掌握 Clash Verge Rev 扩展脚本 (Script) 配置教程：自定义规则重写 的正确方法后，选择稳定的自营专线机场（如 [灵动云](/providers/lingdong-cloud)），即可畅享无界访问。
+进入 Clash Verge Rev 的 订阅 (Profiles) -> 扩展脚本 菜单，点击新建脚本，粘贴常用逻辑：
 
+### 示例：注入自定义直连与代理规则
+在脚本函数中，通过定义包含规则数组的 myRules 变量，并使用展开运算符 concat 将自定义规则插入在 config.rules 数组最前端，确保个人规则获得最高优先级解析。
+
+---
+
+## 3. 绑定脚本与测试生效
+
+1. 脚本编写完成后，点击保存。
+2. 回到订阅列表，在对应的机场订阅卡片上点击右键，选择右键菜单中的规则与脚本控制，勾选刚才创建的脚本。
+3. 点击订阅卡片右侧的刷新图标。成功刷新后，可在代理页面看到注入的自定义规则已经精准生效。

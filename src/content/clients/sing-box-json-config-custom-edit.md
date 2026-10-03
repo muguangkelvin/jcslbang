@@ -1,45 +1,123 @@
 ---
 title: "Sing-box JSON 配置文件手动修改指南：出站入站路由高级编辑"
-description: "针对 Sing-box JSON 配置文件手动修改指南：出站入站路由高级编辑 的 2026 专业深度实测与保姆级配置指南，涵盖技术原理拆解、跑分对比、常见坑点规避与高效科学上网选型方案。"
-pubDate: "2026-09-19"
-updatedDate: "2026-09-20"
-category: "客户端教程"
-tags: ["Clash教程", "机场实力榜", "客户端教程", "2026机场推荐"]
-keywords: ["Clash教程", "Shadowrocket配置", "Sing-box教学", "v2rayN使用"]
-search_synonyms: ["魔法上网", "梯子推荐", "翻墙机场", "科学上网", "IPLC专线", "4K秒开", "晚高峰不卡顿", "Clash教程", "Sing-box", "Shadowrocket", "节点测速"]
-featured: true
+description: "深入剖析 Sing-box 的 JSON 配置文件四大核心结构（inbounds, outbounds, route, dns），手把手教你编写自定义路由规则与协议出站。"
+pubDate: 2024-04-05
+category: "clients"
+tags: ["Sing-box", "JSON配置", "路由规则", "进阶教程", "客户端教程"]
 ---
 
-# Sing-box JSON 配置文件手动修改指南：出站入站路由高级编辑
+与 Clash 的 YAML 语法不同，**Sing-box** 采用了更为严格且结构化的 **JSON 格式** 来管理其所有网络配置。对于高级玩家和自建节点用户来说，学会手写和修改 Sing-box 的 config.json 文件是实现个性化分流与防封锁的必修课。
 
-## Sing-box JSON 配置文件手动修改指南：出站入站路由高级编辑 的核心功能与适用网络环境
-关于 Sing-box JSON 配置文件手动修改指南：出站入站路由高级编辑 的实际使用需求，理清客户端的协议内核与系统网络接管权限是首要基础。本指南将为你展开系统拆解。
+本文将为你深度拆解 Sing-box JSON 配置文件的底层语法结构与实战修改技巧。
 
-## 使用 Sing-box JSON 配置文件手动修改指南：出站入站路由高级编辑 前的准备工作与系统权限放行
-建议从 GitHub 官方 Release 页面或正版商店获取安装包。安装后须放行系统防火墙与创建虚拟网卡 (VPN/TUN) 授权，并确保电脑/手机时间与标准北京时间同步。
+---
 
-## Sing-box JSON 配置文件手动修改指南：出站入站路由高级编辑 的核心操作流程：订阅导入与规则分流
-1. 登录自营机场后台（如 [灵动云](/providers/lingdong-cloud) 或 [暮光网络](/providers/twilight)）复制订阅 URL。
-2. 打开客户端添加 Profiles 配置并拉取节点。
-3. 保持选择 Rule 规则模式，开启国内流量直连放行、国外流量走代理。
+## Sing-box config.json 的四大核心顶层模块
 
-## Sing-box JSON 配置文件手动修改指南：出站入站路由高级编辑 进阶配置：开启 TUN 模式与防止 DNS 泄漏
-若需要让终端命令行、Git 或外服游戏走代理，在软件中开启 TUN 虚拟网卡模式。TUN 模式将挂载底栈网卡，强制接管全盘 TCP/UDP 流量。
+每一个标准的 Sing-box 配置文件都由以下 4 个最基础的 JSON 对象组成：
 
-## Sing-box JSON 配置文件手动修改指南：出站入站路由高级编辑 核心参数与全平台客户端支持横向对比
-以下为 Sing-box JSON 配置文件手动修改指南：出站入站路由高级编辑 在主流操作系统中的兼容性与内核表现：
+```
+config.json 顶级结构拆解：
+{
+  "log": { ... },       // 日志级别与输出路径
+  "dns": { ... },       // 本地与远程加密 DNS 解析规则
+  "inbounds": [ ... ],  // 本地监听端口 (Mixed / TUN / SOCKS5)
+  "outbounds": [ ... ], // 节点服务器与选路分组 (VLESS / Hy2 / Selector)
+  "route": { ... }      // 域名/IP 分流规则逻辑
+}
+```
 
-## 针对 Sing-box JSON 配置文件手动修改指南：出站入站路由高级编辑 的节点选择与落地 IP 解锁优化
-在日常使用时，若遇到 ChatGPT 1020 报错或 Netflix 无法播放，建议在节点列表中优先切换至住宅 Native 原生 IP 线路。
+---
 
-## Sing-box JSON 配置文件手动修改指南：出站入站路由高级编辑 常见连接故障与节点超时排查 FAQ
-遇到节点全部 Timeout，优先点开系统时间自动同步。出现端口 7890 占用时，在任务管理器中结束旧进程。
+## 模块一：inbounds 入站配置（开启 TUN 透明代理）
 
-| 客户端软件名称 | 适用操作系统 | 核心代理内核 | TUN 模式支持 | 分流重写支持 | 适合用户类型 |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Clash Verge Rev** | Windows / macOS | Mihomo (Meta) | 支持 (一键勾选) | 支持 JS / YAML 扩展 | 追赶最新协议与桌面端首选 |
-| **Sing-box GUI** | 全平台 (Win/Mac/iOS/Android) | Sing-box 原生 | 支持 | 支持 JSON 规则集 | 追求极低内存占用与 Hy2 用户 |
-| **Shadowrocket (小火箭)** | iOS / iPadOS | 自研高效内核 | 支持 | 支持 JS 重写与去广告 | iPhone 苹果手机必备神器 |
+入站模块定义了 Sing-box 如何接收本地设备的网络流量：
 
-掌握 Sing-box JSON 配置文件手动修改指南：出站入站路由高级编辑 的正确方法后，选择稳定的自营专线机场（如 [灵动云](/providers/lingdong-cloud)），即可畅享无界访问。
+```json
+"inbounds": [
+  {
+    "type": "tun",
+    "tag": "tun-in",
+    "interface_name": "singbox-tun",
+    "inet4_address": "172.19.0.1/30",
+    "auto_route": true,
+    "strict_route": true,
+    "sniff": true
+  }
+]
+```
+- **auto_route: true**：自动将系统默认网关流量重定向到 Sing-box，实现全局透明代理。
+- **sniff: true**：开启域名嗅探，自动从 TLS ClientHello 中提取真实域名进行规则匹配。
 
+---
+
+## 模块二：outbounds 出站配置与节点分组
+
+出站定义了数据包发往哪里。以下是一个经典的智能选路出站组示例：
+
+```json
+"outbounds": [
+  {
+    "type": "selector",
+    "tag": "节点选择",
+    "outbounds": ["香港 01-IPLC", "日本 02-BGP", "自动选择"]
+  },
+  {
+    "type": "vless",
+    "tag": "香港 01-IPLC",
+    "server": "hk.example.com",
+    "server_port": 443,
+    "uuid": "your-uuid-here",
+    "tls": {
+      "enabled": true,
+      "server_name": "hk.example.com"
+    }
+  },
+  {
+    "type": "direct",
+    "tag": "direct"
+  }
+]
+```
+
+---
+
+## 模块三：route 域名与 IP 分流规则
+
+在 route 模块中指定具体流量走哪一个出站策略：
+
+```json
+"route": {
+  "rules": [
+    {
+      "geosite": ["private", "cn"],
+      "outbound": "direct"
+    },
+    {
+      "geosite": ["netflix", "youtube"],
+      "outbound": "节点选择"
+    },
+    {
+      "geoip": ["cn"],
+      "outbound": "direct"
+    }
+  ],
+  "auto_detect_interface": true
+}
+```
+
+---
+
+## Sing-box JSON 修改常见问题 (FAQ)
+
+### Q1：为什么编辑 JSON 后 Sing-box 报 syntax error 错？
+JSON 格式非常严谨，**最后一个元素后面绝对不能带多余的逗号**，且属性名必须用双引号包裹。建议使用 VS Code 或 JSONLint 工具进行在线语法校验。
+
+### Q2：Sing-box v1.8+ 升级后某些旧 JSON 字段不生效了？
+Sing-box 更新迭代较快。例如 v1.8 之后 geoip 和 geosite 正式废弃，推荐改用全新的 **rule_set (规则集)** 独立编译文件导入。
+
+---
+
+## Sing-box JSON 高级编辑总结
+
+掌握 Sing-box 的 JSON 结构后，你便拥有了对网络流量的终极控制权。不管是自定义 Fake-IP 域名段，还是实现多机场线路负载均衡分流，都能通过精简手写 JSON 轻松做到。
