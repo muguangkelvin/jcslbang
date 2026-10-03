@@ -1,0 +1,61 @@
+---
+import SEOHead from '../components/SEOHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+}
+
+const { title, description, canonical } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+  <head>
+    <SEOHead title={title} description={description} canonical={canonical} />
+  </head>
+  <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
+    <div>
+      <Header />
+      <main class="w-full">
+        <slot />
+      </main>
+    </div>
+    <Footer />
+
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        // 1. Auto-wrap Markdown tables in .table-wrapper for responsive horizontal scrolling
+        document.querySelectorAll('article table, .prose table, .content table').forEach(table => {
+          if (!table.parentElement.classList.contains('table-wrapper')) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'table-wrapper';
+            table.parentNode.insertBefore(wrapper, table);
+            wrapper.appendChild(table);
+          }
+        });
+
+        // 2. Safety DOM unwrap: if any pre/code block contains raw HTML UI components, convert it into rendered HTML
+        document.querySelectorAll('article pre, .prose pre, .content pre').forEach(pre => {
+          const code = pre.querySelector('code');
+          const text = (code || pre).textContent || '';
+          if (text.includes('class="p-4 bg-white') || text.includes('grid grid-cols') || text.includes('暮光网络') || text.includes('飞猫云')) {
+            const temp = document.createElement('div');
+            temp.innerHTML = text.replace(/<!--[\s\S]*?-->/g, '').trim();
+            if (pre.parentNode) {
+              const fragment = document.createDocumentFragment();
+              while (temp.firstChild) {
+                fragment.appendChild(temp.firstChild);
+              }
+              pre.parentNode.replaceChild(fragment, pre);
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

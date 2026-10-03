@@ -1,0 +1,36 @@
+{
+  "profileVersion": "1.0.0",
+  "domain": "https://jcslbang.homes",
+  "siteTitle": "机场实力榜 - 2026最新稳定梯子推荐与小白魔法上网配置教程 | jcslbang.homes",
+  "siteTopic": "机场实力榜",
+  "siteDescription": "专为零基础小白用户打造的梯子与机场测速评测、选购避坑及客户端配置指南。",
+  "tgChannel": "https://t.me/+rGDXqHbxorZjN2Jl",
+  "primaryKeywords": [
+    "机场实力榜",
+    "梯子实力榜",
+    "2026机场推荐",
+    "稳定机场推荐",
+    "小白翻墙梯子",
+    "魔法上网机场推荐",
+    "节点测速排行榜"
+  ],
+  "secondaryKeywords": [
+    "便宜好用机场",
+    "高性价比梯子",
+    "4K秒开机场",
+    "IPLC专线机场",
+    "游戏低延迟加速梯子",
+    "魔法工具推荐",
+    "翻墙机场跑分",
+    "科学上网新手入门",
+    "晚高峰不卡顿机场"
+  ],
+  "navigationItems": [
+    { "label": "实力榜单", "url": "/ranks", "articleCount": 15 },
+    { "label": "新手入门", "url": "/guides", "articleCount": 20 },
+    { "label": "客户端教程", "url": "/clients", "articleCount": 25 },
+    { "label": "专线特选", "url": "/lines", "articleCount": 15 },
+    { "label": "避坑答疑", "url": "/faq", "articleCount": 25 },
+    { "label": "机场合集", "url": "/providers", "articleCount": 28 }
+  ]
+}

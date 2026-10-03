@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+
+<BaseLayout title="隐私政策 - 机场实力榜 | jcslbang.homes" description="机场实力榜 的隐私保护规范、无追踪政策与数据安全承诺。">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    <Breadcrumbs items={[{ label: '隐私政策' }]} />
+
+    <!-- Page Header Banner -->
+    <div class="p-6 sm:p-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl text-white shadow-lg space-y-3">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-bold">
+        <span>🔒 纯静态网站 · 无强制注册 · 隐私优先 · 全站 HTTPS</span>
+      </div>
+      <h1 class="text-2xl sm:text-4xl font-black">隐私政策与数据保护声明</h1>
+      <p class="text-sm sm:text-base text-blue-100 leading-relaxed max-w-3xl">
+        机场实力榜十分重视访问者的个人隐私与数据安全。本站采用现代 Astro 静态架构输出，致力于打造安全无忧的技术分享环境。
+      </p>
+    </div>
+
+    <!-- Main Content Container -->
+    <article class="prose prose-slate dark:prose-invert max-w-none bg-white dark:bg-slate-900 p-6 sm:p-10 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-8">
+      
+      <!-- Section 1 -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>🛡️</span>
+          <span>1. 数据收集与无注册政策</span>
+        </h2>
+        <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside leading-relaxed">
+          <li><strong>无需注册登录</strong>：读者访问本站无需注册任何账号、无需输入手机号、邮箱或任何敏感个人信息。</li>
+          <li><strong>无敏感追踪</strong>：本站不使用任何跨站指纹追踪技术，不收集用户的设备个人通讯录或身份隐私。</li>
+          <li><strong>纯静态输出</strong>：全站使用静态 HTML / CSS / JS 构建，服务器端不保留任何包含个人身份信息的数据库记录。</li>
+        </ul>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>🔒</span>
+          <span>2. 传输安全与 Cookie 使用</span>
+        </h2>
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          全站采用标准 TLS/HTTPS 协议进行加密传输，防止中途网络监听与非法劫持。本站可能仅使用最必要的本地 Cookie 或 LocalStorage 保存读者的深色/浅色主题偏好，不会用于任何广告广告画像与第三方分享。
+        </p>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>🌐</span>
+          <span>3. 第三方网站跳转提示</span>
+        </h2>
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          本站包含前往第三方服务商官网的外部链接。当您点击跳转并离开本站时，请参阅该第三方服务商自身的隐私政策。本站对其独立的服务行为与数据收集策略不承担直接责任。
+        </p>
+      </section>
+
+    </article>
+  </div>
+</BaseLayout>

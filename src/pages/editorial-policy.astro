@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+
+<BaseLayout title="编辑原则 - 机场实力榜 | jcslbang.homes" description="机场实力榜 的选题标准、数据证据、最后核验时间规范与利益冲突透明声明。">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    <Breadcrumbs items={[{ label: '编辑原则' }]} />
+
+    <!-- Page Header Banner -->
+    <div class="p-6 sm:p-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl text-white shadow-lg space-y-3">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-bold">
+        <span>⚖️ 独立客观 · 数据说话 · 利益透明 · 读者优先</span>
+      </div>
+      <h1 class="text-2xl sm:text-4xl font-black">机场实力榜编辑原则</h1>
+      <p class="text-sm sm:text-base text-blue-100 leading-relaxed max-w-3xl">
+        为了保障本站推荐的客观性与权威性，编辑部制定了严苛的选题、测试与更正规范。我们拒绝任何不经实测的排名出售行为，始终坚持以读者的上网体验与资金安全为核心。
+      </p>
+    </div>
+
+    <!-- Main Content Container -->
+    <article class="prose prose-slate dark:prose-invert max-w-none bg-white dark:bg-slate-900 p-6 sm:p-10 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-8">
+      
+      <!-- Section 1 -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>1️⃣</span>
+          <span>客观实测与数据留痕</span>
+        </h2>
+        <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside leading-relaxed">
+          <li><strong>真实环境测试</strong>：所有跑分数据与推荐结论均基于真实网络节点测试，包含电信、联通、移动多网晚高峰（20:00-22:00）压力测试。</li>
+          <li><strong>时间戳核验</strong>：全站每家机场卡片与文章均打上明确的【最后核验日期】，确保读者能了解数据的时效性。</li>
+          <li><strong>杜绝虚假跑分</strong>：拒绝使用本地缓存伪造测速截图，以 4K 视频实际播放码率及 Steam 真实下载速度作为评判依据。</li>
+        </ul>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>2️⃣</span>
+          <span>利益冲突与联盟透明度</span>
+        </h2>
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          本站部分按钮与官方入口包含第三方联盟或邀请代码 (`rel="sponsored nofollow noopener"`)。读者通过这些链接注册购买时，本站可能获得少许佣金。这些收益将全部用于维护测速服务器节点、购买测试套餐及支付服务器硬件开销。
+        </p>
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          <strong>声明</strong>：商业合作绝不影响评测结果的独立性。任何服务质量严重下滑或存在跑风风险的机场，编辑部将立即下架或在榜单中予以标注。
+        </p>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>3️⃣</span>
+          <span>小白用户保护与避坑提醒</span>
+        </h2>
+        <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700/80 space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+          <p>• <strong>建议月付试水</strong>：在任何评测中，我们都优先建议零基础小白购买月付套餐，体验良好后再考虑长周期折扣。</p>
+          <p>• <strong>防失联备用方案</strong>：倡导“主用机场+低成本备用机场”的双配置策略，防止单点故障影响日常办公。</p>
+        </div>
+      </section>
+
+    </article>
+  </div>
+</BaseLayout>

@@ -1,0 +1,101 @@
+id,cluster,questionTitle,slug,canonicalTarget,indexStatus,bodyCharCount,lastChecked
+1,"机场推荐与选购标准","小白买梯子首要看什么参数？",faq-q1,/faq#faq-q1,indexable,124,2026-09-19
+2,"机场推荐与选购标准","什么是便宜好用的机场？如何判断？",faq-q2,/faq#faq-q2,indexable,100,2026-09-19
+3,"机场推荐与选购标准","2026年稳定机场有哪些推荐指标？",faq-q3,/faq#faq-q3,indexable,92,2026-09-19
+4,"机场推荐与选购标准","为什么不建议一次性买几年套餐？",faq-q4,/faq#faq-q4,indexable,88,2026-09-19
+5,"机场推荐与选购标准","自建梯子与买现成机场哪个划算？",faq-q5,/faq#faq-q5,indexable,101,2026-09-19
+6,"机场推荐与选购标准","如何识别打着跑分旗号的虚假机场？",faq-q6,/faq#faq-q6,indexable,97,2026-09-19
+7,"机场推荐与选购标准","机场的节点倍率是什么意思？",faq-q7,/faq#faq-q7,indexable,109,2026-09-19
+8,"机场推荐与选购标准","流媒体解锁机场需要具备什么条件？",faq-q8,/faq#faq-q8,indexable,112,2026-09-19
+9,"机场推荐与选购标准","AI工具（ChatGPT/Claude）对机场有什么特殊要求？",faq-q9,/faq#faq-q9,indexable,108,2026-09-19
+10,"机场推荐与选购标准","备用机场有必要购买吗？",faq-q10,/faq#faq-q10,indexable,73,2026-09-19
+11,"机场推荐与选购标准","机场跑分高就等于实际体验好吗？",faq-q11,/faq#faq-q11,indexable,72,2026-09-19
+12,"机场推荐与选购标准","机场订阅转换工具有风险吗？",faq-q12,/faq#faq-q12,indexable,93,2026-09-19
+13,"机场推荐与选购标准","性价比梯子如何避免买到炸弹机场？",faq-q13,/faq#faq-q13,indexable,77,2026-09-19
+14,"机场推荐与选购标准","机场套餐流量重置时间怎么算？",faq-q14,/faq#faq-q14,indexable,70,2026-09-19
+15,"机场推荐与选购标准","直连机场与中转机场体验差多少？",faq-q15,/faq#faq-q15,indexable,77,2026-09-19
+16,"机场推荐与选购标准","高性价比机场推荐哪个？",faq-q16,/faq#faq-q16,indexable,59,2026-09-19
+17,"机场推荐与选购标准","机场购买支付方式支持哪些？",faq-q17,/faq#faq-q17,indexable,58,2026-09-19
+18,"机场推荐与选购标准","购买机场后有退款保障吗？",faq-q18,/faq#faq-q18,indexable,58,2026-09-19
+19,"Clash客户端与订阅","Clash Verge Rev 为什么是2026年首选客户端？",faq-q19,/faq#faq-q19,indexable,102,2026-09-19
+20,"Clash客户端与订阅","Clash 提示 Subscription Update Failed 怎么解决？",faq-q20,/faq#faq-q20,indexable,91,2026-09-19
+21,"Clash客户端与订阅","Clash 怎么开启全局 TUN 模式？",faq-q21,/faq#faq-q21,indexable,84,2026-09-19
+22,"Clash客户端与订阅","Clash 规则模式 (Rule) 与全局模式 (Global) 有什么区别？",faq-q22,/faq#faq-q22,indexable,61,2026-09-19
+23,"Clash客户端与订阅","Clash for Windows (CFW) 停更了还能用吗？",faq-q23,/faq#faq-q23,indexable,77,2026-09-19
+24,"Clash客户端与订阅","Clash 怎么导入一键订阅链接？",faq-q24,/faq#faq-q24,indexable,70,2026-09-19
+25,"Clash客户端与订阅","Clash 节点列表刷新不出节点怎么办？",faq-q25,/faq#faq-q25,indexable,58,2026-09-19
+26,"Clash客户端与订阅","Clash 的扩展脚本 Parser 怎么用？",faq-q26,/faq#faq-q26,indexable,54,2026-09-19
+27,"Clash客户端与订阅","Clash 局域网共享 (Allow LAN) 怎么给手机用？",faq-q27,/faq#faq-q27,indexable,89,2026-09-19
+28,"Clash客户端与订阅","Clash 界面节点延迟显示变红或 -1ms 是怎么回事？",faq-q28,/faq#faq-q28,indexable,104,2026-09-19
+29,"Clash客户端与订阅","Clash 如何实现国内网页直连不消耗流量？",faq-q29,/faq#faq-q29,indexable,70,2026-09-19
+30,"Clash客户端与订阅","Clash 开机自启与后台最小化如何配置？",faq-q30,/faq#faq-q30,indexable,51,2026-09-19
+31,"Clash客户端与订阅","Mac 版 Clash Nyanpasu 有什么优势？",faq-q31,/faq#faq-q31,indexable,78,2026-09-19
+32,"Clash客户端与订阅","Clash 订阅转换后节点丢失怎么办？",faq-q32,/faq#faq-q32,indexable,57,2026-09-19
+33,"SS/Shadowsocks协议","Shadowsocks (SS) 协议现在还稳定吗？",faq-q33,/faq#faq-q33,indexable,83,2026-09-19
+34,"SS/Shadowsocks协议","SS 协议与 SSR 协议有什么联系与区别？",faq-q34,/faq#faq-q34,indexable,91,2026-09-19
+35,"SS/Shadowsocks协议","Shadowrocket 小火箭导入 SS 节点配置步骤？",faq-q35,/faq#faq-q35,indexable,68,2026-09-19
+36,"SS/Shadowsocks协议","SS 协议适合游戏加速吗？",faq-q36,/faq#faq-q36,indexable,62,2026-09-19
+37,"SS/Shadowsocks协议","为什么有的 SS 节点直连容易被封？",faq-q37,/faq#faq-q37,indexable,72,2026-09-19
+38,"SS/Shadowsocks协议","SS 2022 最新标准提升了什么？",faq-q38,/faq#faq-q38,indexable,49,2026-09-19
+39,"SS/Shadowsocks协议","v2rayN 如何添加 Shadowsocks 节点？",faq-q39,/faq#faq-q39,indexable,70,2026-09-19
+40,"SS/Shadowsocks协议","SS 节点能解锁 Netflix 吗？",faq-q40,/faq#faq-q40,indexable,61,2026-09-19
+41,"SS/Shadowsocks协议","SS 协议的 UDP 转发怎么开启？",faq-q41,/faq#faq-q41,indexable,56,2026-09-19
+42,"SS/Shadowsocks协议","哪些代理客户端全面兼容 SS 协议？",faq-q42,/faq#faq-q42,indexable,79,2026-09-19
+43,"Trojan协议指南","Trojan 协议的核心原理是什么？",faq-q43,/faq#faq-q43,indexable,71,2026-09-19
+44,"Trojan协议指南","Trojan 协议与 VMess 协议哪个更好？",faq-q44,/faq#faq-q44,indexable,74,2026-09-19
+45,"Trojan协议指南","Trojan 节点在小火箭中怎么配置？",faq-q45,/faq#faq-q45,indexable,73,2026-09-19
+46,"Trojan协议指南","Trojan 节点提示证书失效怎么办？",faq-q46,/faq#faq-q46,indexable,51,2026-09-19
+47,"Trojan协议指南","为什么 Trojan 协议晚高峰表现更平稳？",faq-q47,/faq#faq-q47,indexable,57,2026-09-19
+48,"Trojan协议指南","Sing-box 客户端怎么配置 Trojan 节点？",faq-q48,/faq#faq-q48,indexable,74,2026-09-19
+49,"Trojan协议指南","Trojan-Go 是什么？与普通 Trojan 有何区别？",faq-q49,/faq#faq-q49,indexable,69,2026-09-19
+50,"Trojan协议指南","Trojan 节点支持分流解锁 AI 吗？",faq-q50,/faq#faq-q50,indexable,58,2026-09-19
+51,"Trojan协议指南","自建 Trojan 节点为什么容易域名被封？",faq-q51,/faq#faq-q51,indexable,66,2026-09-19
+52,"Trojan协议指南","Trojan 协议适合移动端省电吗？",faq-q52,/faq#faq-q52,indexable,55,2026-09-19
+53,"梯子选购与避坑","新手第一次买梯子最容易踩什么坑？",faq-q53,/faq#faq-q53,indexable,89,2026-09-19
+54,"梯子选购与避坑","机场跑路前有哪些征兆？",faq-q54,/faq#faq-q54,indexable,59,2026-09-19
+55,"梯子选购与避坑","为什么免费梯子最昂贵？",faq-q55,/faq#faq-q55,indexable,52,2026-09-19
+56,"梯子选购与避坑","如何测试购买的梯子是否包含真 IP 专线？",faq-q56,/faq#faq-q56,indexable,68,2026-09-19
+57,"梯子选购与避坑","机场套餐里的限制设备数是什么意思？",faq-q57,/faq#faq-q57,indexable,62,2026-09-19
+58,"梯子选购与避坑","购买梯子遇到无法支付怎么处理？",faq-q58,/faq#faq-q58,indexable,48,2026-09-19
+59,"梯子选购与避坑","科学上网过程中如何保障资金安全？",faq-q59,/faq#faq-q59,indexable,59,2026-09-19
+60,"梯子选购与避坑","防失联书签与备用域名有什么用？",faq-q60,/faq#faq-q60,indexable,58,2026-09-19
+61,"节点与地区延迟","香港、日本、新加坡、美国节点选哪个最好？",faq-q61,/faq#faq-q61,indexable,73,2026-09-19
+62,"节点与地区延迟","节点物理延迟与实际体验延迟有什么关系？",faq-q62,/faq#faq-q62,indexable,67,2026-09-19
+63,"节点与地区延迟","为什么有的节点延迟特别低但网页打不开？",faq-q63,/faq#faq-q63,indexable,72,2026-09-19
+64,"节点与地区延迟","什么是自动选择节点 (Url-Test)？",faq-q64,/faq#faq-q64,indexable,59,2026-09-19
+65,"节点与地区延迟","台湾节点适合哪些使用场景？",faq-q65,/faq#faq-q65,indexable,40,2026-09-19
+66,"节点与地区延迟","欧洲与澳大利亚节点什么时候用？",faq-q66,/faq#faq-q66,indexable,49,2026-09-19
+67,"节点与地区延迟","节点名称上的 0.1x / 1.0x / 2.0x 含义？",faq-q67,/faq#faq-q67,indexable,44,2026-09-19
+68,"节点与地区延迟","如何降低游戏挂载梯子时的延迟抖动？",faq-q68,/faq#faq-q68,indexable,62,2026-09-19
+69,"节点与地区延迟","节点 IP 显示为机房 IP 会有什么影响？",faq-q69,/faq#faq-q69,indexable,66,2026-09-19
+70,"节点与地区延迟","为什么晚高峰某些节点延迟会升高？",faq-q70,/faq#faq-q70,indexable,63,2026-09-19
+71,"节点与地区延迟","冷门地区节点（如阿根廷/土耳其）有什么用？",faq-q71,/faq#faq-q71,indexable,51,2026-09-19
+72,"节点与地区延迟","客户端里面的 节点过滤 (Filter) 功能怎么用？",faq-q72,/faq#faq-q72,indexable,43,2026-09-19
+73,"节点与地区延迟","高画质 8K 视频播放对节点要求多大带宽？",faq-q73,/faq#faq-q73,indexable,48,2026-09-19
+74,"节点与地区延迟","节点离自己地理位置越近速度越快吗？",faq-q74,/faq#faq-q74,indexable,37,2026-09-19
+75,"套餐价格与优惠","机场优惠码怎么使用？在哪里输入？",faq-q75,/faq#faq-q75,indexable,76,2026-09-19
+76,"套餐价格与优惠","月付20元120GB套餐够日常使用吗？",faq-q76,/faq#faq-q76,indexable,57,2026-09-19
+77,"套餐价格与优惠","一次性不限时流量包划算吗？",faq-q77,/faq#faq-q77,indexable,33,2026-09-19
+78,"套餐价格与优惠","年付套餐优惠力度通常有多大？",faq-q78,/faq#faq-q78,indexable,45,2026-09-19
+79,"套餐价格与优惠","流量用完了可以中途叠加流量包吗？",faq-q79,/faq#faq-q79,indexable,40,2026-09-19
+80,"套餐价格与优惠","团队/企业大流量套餐如何定制？",faq-q80,/faq#faq-q80,indexable,45,2026-09-19
+81,"套餐价格与优惠","为什么有的机场套餐区分标准版与旗舰版？",faq-q81,/faq#faq-q81,indexable,48,2026-09-19
+82,"套餐价格与优惠","机场优惠活动一般在什么时候推出？",faq-q82,/faq#faq-q82,indexable,34,2026-09-19
+83,"套餐价格与优惠","续费套餐可以使用优惠码吗？",faq-q83,/faq#faq-q83,indexable,39,2026-09-19
+84,"套餐价格与优惠","套餐升级需要补差价还是重新购买？",faq-q84,/faq#faq-q84,indexable,32,2026-09-19
+85,"多设备与系统兼容","苹果 iPhone 手机用什么代理客户端最好？",faq-q85,/faq#faq-q85,indexable,57,2026-09-19
+86,"多设备与系统兼容","Windows 电脑科学上网推荐哪个客户端？",faq-q86,/faq#faq-q86,indexable,58,2026-09-19
+87,"多设备与系统兼容","Mac 苹果电脑推荐什么客户端？",faq-q87,/faq#faq-q87,indexable,69,2026-09-19
+88,"多设备与系统兼容","安卓手机用什么梯子客户端？",faq-q88,/faq#faq-q88,indexable,54,2026-09-19
+89,"多设备与系统兼容","软路由 (OpenWrt) 怎么安装机场节点？",faq-q89,/faq#faq-q89,indexable,62,2026-09-19
+90,"多设备与系统兼容","安卓电视盒 (Android TV) 怎么看海外 4K 视频？",faq-q90,/faq#faq-q90,indexable,80,2026-09-19
+91,"多设备与系统兼容","iPad 与 iPhone 可以共享同一个机场订阅吗？",faq-q91,/faq#faq-q91,indexable,53,2026-09-19
+92,"多设备与系统兼容","Linux 系统服务器如何配置机场代理？",faq-q92,/faq#faq-q92,indexable,77,2026-09-19
+93,"排障隐私与安全","连上梯子后网页打不开提示 连接不安全？",faq-q93,/faq#faq-q93,indexable,36,2026-09-19
+94,"排障隐私与安全","Telegram 始终显示 Connecting 连不上解决办法？",faq-q94,/faq#faq-q94,indexable,71,2026-09-19
+95,"排障隐私与安全","使用机场翻墙会泄露个人微信支付宝隐私吗？",faq-q95,/faq#faq-q95,indexable,52,2026-09-19
+96,"排障隐私与安全","什么是 DNS 污染？如何防范？",faq-q96,/faq#faq-q96,indexable,70,2026-09-19
+97,"排障隐私与安全","国内网站访问变慢怎么办？",faq-q97,/faq#faq-q97,indexable,54,2026-09-19
+98,"排障隐私与安全","安卓手机后台代理经常断开被杀掉怎么办？",faq-q98,/faq#faq-q98,indexable,57,2026-09-19
+99,"排障隐私与安全","浏览器打不开网页但 QQ 微信能发消息？",faq-q99,/faq#faq-q99,indexable,50,2026-09-19
+100,"排障隐私与安全","科学上网的安全守则有哪些？",faq-q100,/faq#faq-q100,indexable,57,2026-09-19

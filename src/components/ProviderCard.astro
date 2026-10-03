@@ -1,0 +1,124 @@
+---
+interface Props {
+  rank: number;
+  name: string;
+  slug: string;
+  inviteURL: string;
+  priceFrom: string;
+  trafficFrom: string;
+  coupon?: string;
+  suitableFor: string;
+  summary: string;
+  isPrimary?: boolean;
+  regions?: string[];
+  aiUnlock?: string;
+  deviceLimit?: string;
+  packagesSummary?: string;
+}
+
+const {
+  rank,
+  name,
+  slug,
+  inviteURL,
+  priceFrom,
+  trafficFrom,
+  coupon,
+  suitableFor,
+  summary,
+  isPrimary = false,
+  regions = ['香港', '日本', '新加坡', '美国'],
+  aiUnlock = '全端解锁 AI / 流媒体',
+  deviceLimit = '支持 3~5 台设备',
+  packagesSummary = `${priceFrom} (${trafficFrom})`
+} = Astro.props;
+
+const badgeColors = [
+  "bg-amber-100 text-amber-800 border-amber-300",
+  "bg-slate-200 text-slate-800 border-slate-300",
+  "bg-amber-50 text-amber-700 border-amber-200",
+  "bg-blue-50 text-blue-800 border-blue-200"
+];
+
+const formattedRegions = Array.isArray(regions) ? regions.slice(0, 4).join(' · ') : (regions || '全球节点');
+---
+
+<div class={`p-6 rounded-2xl border transition-all flex flex-col h-full justify-between ${
+  isPrimary
+    ? 'bg-gradient-to-br from-white via-slate-50 to-blue-50/40 dark:from-slate-800 dark:to-slate-900 border-blue-200 dark:border-blue-900/60 shadow-lg hover:shadow-xl'
+    : 'bg-white dark:bg-slate-800/90 border-slate-200 dark:border-slate-700/80 hover:border-slate-300 shadow-sm hover:shadow-md'
+}`}>
+  <div class="space-y-3">
+    <!-- Row 1: Top Header (Badge & Price) -->
+    <div class="flex items-start justify-between gap-2 min-h-[38px]">
+      <a href={`/providers/${slug}`} class={`px-2.5 py-1 text-xs font-bold rounded-full border shrink-0 hover:opacity-80 transition-opacity ${badgeColors[rank - 1] || 'bg-slate-100 text-slate-700 border-slate-200'}`}>
+        #{rank} {rank <= 4 ? '核心主推' : '推荐'}
+      </a>
+      <span class="text-xs sm:text-sm font-bold text-emerald-600 dark:text-emerald-400 text-right leading-tight">
+        {priceFrom} <span class="text-slate-300 dark:text-slate-600 font-normal">/</span> {trafficFrom}
+      </span>
+    </div>
+
+    <!-- Row 2: Title & Coupon -->
+    <div class="flex items-center justify-between min-h-[34px]">
+      <h3 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white truncate">
+        <a href={`/providers/${slug}`} class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+          {name}
+        </a>
+      </h3>
+      {coupon && coupon !== '暂无优惠码' && coupon !== '暂无' ? (
+        <span class="text-xs font-mono font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950 px-2 py-0.5 rounded border border-blue-200 dark:border-blue-800 shrink-0 ml-2">
+          码: {coupon}
+        </span>
+      ) : (
+        <span class="text-xs font-mono text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded border border-slate-200 dark:border-slate-700 shrink-0 ml-2">
+          免码直达
+        </span>
+      )}
+    </div>
+
+    <!-- Row 3: 💡 场景与热点特性 (Fixed Height) -->
+    <div class="text-xs font-medium text-slate-700 dark:text-slate-300 bg-slate-100/90 dark:bg-slate-700/60 p-3 rounded-xl h-[64px] flex flex-col justify-center overflow-hidden gap-1">
+      <div class="truncate">💡 <strong>适用场景：</strong>{suitableFor}</div>
+      <div class="truncate text-blue-600 dark:text-blue-400">🔥 <strong>热点解锁：</strong>{aiUnlock}</div>
+    </div>
+
+    <!-- Row 4: 地区节点 & 设备限制 (Fixed Height Grid) -->
+    <div class="grid grid-cols-2 gap-2 text-xs bg-blue-50/50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-blue-100/50 dark:border-slate-700/50 h-[56px] items-center">
+      <div class="truncate text-slate-600 dark:text-slate-300">
+        🌐 <strong>地区：</strong>{formattedRegions}
+      </div>
+      <div class="truncate text-slate-600 dark:text-slate-300 text-right">
+        💻 <strong>设备：</strong>{deviceLimit}
+      </div>
+    </div>
+
+    <!-- Row 5: 全部套餐价格 (Fixed Height) -->
+    <div class="text-xs text-slate-600 dark:text-slate-300 bg-emerald-50/60 dark:bg-emerald-950/30 p-2.5 rounded-lg border border-emerald-200/50 dark:border-emerald-900/50 h-[36px] flex items-center truncate">
+      💰 <strong>全部套餐：</strong><span class="font-medium text-emerald-700 dark:text-emerald-300 ml-1 truncate">{packagesSummary}</span>
+    </div>
+
+    <!-- Row 6: 优化机场简介内容 (Fixed Height) -->
+    <div class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 h-[58px] flex items-start overflow-hidden leading-relaxed">
+      <p class="line-clamp-3">{summary}</p>
+    </div>
+  </div>
+
+  <!-- Row 7: Dual Action Buttons (Pinned at Bottom) -->
+  <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700/60 flex items-center gap-2">
+    <a
+      href={`/providers/${slug}`}
+      class="w-1/3 py-2 px-3 text-center text-xs font-semibold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 rounded-xl transition-colors"
+    >
+      查看测评
+    </a>
+    <a
+      href={inviteURL}
+      target="_blank"
+      rel="sponsored nofollow noopener"
+      class="w-2/3 py-2 px-3 text-center text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-sm hover:shadow transition-colors"
+    >
+      前往官网注册
+    </a>
+  </div>
+</div>

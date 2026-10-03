@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+const articles = await getCollection('guides');
+---
+
+<BaseLayout title="新手入门 - 机场实力榜 | jcslbang.homes" description="科学上网新手入门指南、机场怎么用及订阅链接导入技巧。包含 20 篇保姆级教程。">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    <Breadcrumbs items={[{ label: '新手入门' }]} />
+
+    <div class="border-b border-slate-200 dark:border-slate-800 pb-6 space-y-2">
+      <h1 class="text-3xl font-black text-slate-900 dark:text-white flex items-center gap-2">
+        <span>📁</span>
+        <span>新手入门</span>
+      </h1>
+      <p class="text-slate-600 dark:text-slate-300 text-sm">
+        科学上网新手入门指南、机场怎么用及订阅链接导入技巧。包含 20 篇保姆级教程。
+      </p>
+    </div>
+
+    <!-- Article Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {articles.map(a => (
+        <ArticleCard post={a} categorySlug="guides" defaultCategoryLabel="新手入门" />
+      ))}
+    </div>
+  </div>
+</BaseLayout>

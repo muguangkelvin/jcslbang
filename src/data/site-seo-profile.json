@@ -1,0 +1,115 @@
+{
+  "profileVersion": "1.0.0",
+  "domain": "https://jcslbang.homes",
+  "siteTitle": "机场实力榜 - 2026最新稳定梯子推荐与小白魔法上网配置教程 | jcslbang.homes",
+  "siteTopic": "机场实力榜",
+  "siteDescription": "专为零基础小白用户打造的梯子与机场测速评测、选购避坑及客户端配置指南。主要内容涵盖高性价比稳定机场推荐、主流代理客户端新手图文教程、节点测速与防失联备用方案。",
+  "tgChannel": "https://t.me/+rGDXqHbxorZjN2Jl",
+  "primaryKeywords": [
+    "机场实力榜",
+    "梯子实力榜",
+    "2026机场推荐",
+    "稳定机场推荐",
+    "小白翻墙梯子",
+    "魔法上网机场推荐",
+    "节点测速排行榜"
+  ],
+  "secondaryKeywords": [
+    "便宜好用机场",
+    "高性价比梯子",
+    "4K秒开机场",
+    "IPLC专线机场",
+    "游戏低延迟加速梯子",
+    "魔法工具推荐",
+    "翻墙机场跑分",
+    "科学上网新手入门",
+    "晚高峰不卡顿机场"
+  ],
+  "longTailKeywords": [
+    "小白怎么买梯子不踩坑",
+    "适合新手的便宜稳定魔法机场",
+    "Clash Verge Rev新手订阅教程",
+    "Shadowrocket小火箭苹果配置节点",
+    "Sing-box跨平台小白教程",
+    "v2rayN电脑端节点导入",
+    "YouTube 4K不掉帧机场",
+    "ChatGPT与TikTok解锁专线梯子",
+    "晚高峰看推特油管顺畅的机场",
+    "机场订阅无法更新排查"
+  ],
+  "heroKeywords": [
+    "机场实力榜",
+    "2026年稳定测速排行",
+    "小白首选高性价比梯子",
+    "100%全解锁流媒体专线",
+    "一键订阅客户端保姆教程"
+  ],
+  "footerKeywords": "机场实力榜 - 专注于提供真实测速数据与小白友好型科学上网指南；涵盖梯子推荐、魔法上网客户端使用教程及低延迟专线评测；全站内容纯技术分享，助力安全顺畅访问全球网络。",
+  "navigationItems": [
+    {
+      "label": "首页",
+      "url": "/",
+      "type": "home"
+    },
+    {
+      "label": "实力榜单",
+      "url": "/ranks",
+      "type": "ranks",
+      "isContentSection": true,
+      "isCommercial": true,
+      "primaryKeyword": "2026机场实力榜",
+      "supportingKeywords": ["测速排行榜", "稳定梯子推荐", "节点测速排行榜"],
+      "articleCount": 15
+    },
+    {
+      "label": "新手入门",
+      "url": "/guides",
+      "type": "guides",
+      "isContentSection": true,
+      "isCommercial": false,
+      "primaryKeyword": "科学上网新手入门",
+      "supportingKeywords": ["机场怎么用", "订阅链接导入", "小白买梯子避坑"],
+      "articleCount": 20
+    },
+    {
+      "label": "客户端教程",
+      "url": "/clients",
+      "type": "clients",
+      "isContentSection": true,
+      "isCommercial": false,
+      "primaryKeyword": "Clash教程",
+      "supportingKeywords": ["Shadowrocket配置", "Sing-box教学", "v2rayN使用"],
+      "articleCount": 25
+    },
+    {
+      "label": "专线特选",
+      "url": "/lines",
+      "type": "lines",
+      "isContentSection": true,
+      "isCommercial": true,
+      "primaryKeyword": "IPLC专线",
+      "supportingKeywords": ["IEPL低延迟专线", "游戏外服加速", "流媒体解锁"],
+      "articleCount": 15
+    },
+    {
+      "label": "避坑答疑",
+      "url": "/faq",
+      "type": "faq",
+      "isContentSection": true,
+      "isCommercial": false,
+      "primaryKeyword": "机场常见问题",
+      "supportingKeywords": ["订阅更新失败", "节点超时排查", "梯子选购避坑"],
+      "articleCount": 25
+    },
+    {
+      "label": "机场合集",
+      "url": "/providers",
+      "type": "providers",
+      "isContentSection": true,
+      "isCommercial": true,
+      "primaryKeyword": "所有机场评测与注册链接",
+      "supportingKeywords": ["全部机场官网", "价格与节点汇总"],
+      "articleCount": 28
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+
+<BaseLayout title="联系我们 - 机场实力榜 | jcslbang.homes" description="联系机场实力榜 编辑部。提交数据纠错、价格更正、文章反馈与技术交流。">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    <Breadcrumbs items={[{ label: '联系我们' }]} />
+
+    <!-- Page Header Banner -->
+    <div class="p-6 sm:p-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl text-white shadow-lg space-y-3">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-bold">
+        <span>📫 读者反馈 · 节点纠错 · 合作交流 · 防失联指南</span>
+      </div>
+      <h1 class="text-2xl sm:text-4xl font-black">联系我们</h1>
+      <p class="text-sm sm:text-base text-blue-100 leading-relaxed max-w-3xl">
+        欢迎与机场实力榜编辑部取得联系。无论您是在教程使用中遇到疑问、发现某家机场的价格或节点发生变动，还是希望提交测速纠错，我们都将及时进行复核与更正。
+      </p>
+    </div>
+
+    <!-- Main Content Container -->
+    <article class="prose prose-slate dark:prose-invert max-w-none bg-white dark:bg-slate-900 p-6 sm:p-10 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-8">
+      
+      <!-- Feedback Methods -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>✈️</span>
+          <span>官方 Telegram 反馈渠道</span>
+        </h2>
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          为保证沟通的时效性与安全性，编辑部主要通过 Telegram 官方频道与读者交流。您可以直接加入频道获取每日测速动态与订阅异常排查指南：
+        </p>
+
+        <div class="p-6 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700/80 space-y-3 not-prose">
+          <div class="flex items-center justify-between">
+            <span class="text-sm font-bold text-slate-900 dark:text-white">✈️ 机场实力榜 Telegram 官方频道</span>
+            <span class="px-2.5 py-0.5 text-xs font-bold bg-sky-100 text-sky-800 rounded-full">实时响应</span>
+          </div>
+          <p class="text-xs text-slate-600 dark:text-slate-300">
+            频道链接：<a href="https://t.me/+rGDXqHbxorZjN2Jl" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 font-mono underline hover:text-blue-700">https://t.me/+rGDXqHbxorZjN2Jl</a>
+          </p>
+          <div class="pt-2">
+            <a
+              href="https://t.me/+rGDXqHbxorZjN2Jl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-5 py-2.5 bg-sky-500 hover:bg-sky-600 text-white font-bold rounded-xl text-xs transition-colors shadow-sm"
+            >
+              <span>加入 Telegram 官方频道</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Common Guidelines -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>📝</span>
+          <span>留言与纠错说明</span>
+        </h2>
+        <div class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+          <div class="p-4 bg-amber-50/50 dark:bg-amber-950/30 rounded-xl border border-amber-200/80 dark:border-amber-900/60">
+            <h3 class="font-bold text-amber-900 dark:text-amber-200 text-sm mb-1">1. 价格与优惠码纠错</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300">
+              机场服务商会不定期更新优惠折扣与套餐计费。如果您发现某家机场的优惠码失效或价格发生调整，请附带该机场名称与最新结算页截图联系我们。
+            </p>
+          </div>
+          <div class="p-4 bg-blue-50/50 dark:bg-blue-950/30 rounded-xl border border-blue-200/80 dark:border-blue-900/60">
+            <h3 class="font-bold text-blue-900 dark:text-blue-200 text-sm mb-1">2. 客户端配置与报错求助</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300">
+              关于 Clash Verge Rev、Shadowrocket (小火箭)、Sing-box 及 v2rayN 的订阅失败与 TUN 模式冲突问题，请先阅读本站【客户端教程】或【避坑答疑 100 问】，若仍未解决可在 Telegram 频道留言。
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </article>
+  </div>
+</BaseLayout>

@@ -1,0 +1,58 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  image?: string;
+  type?: string;
+}
+
+const {
+  title = "机场实力榜 - 2026最新稳定梯子推荐与小白魔法上网配置教程 | jcslbang.homes",
+  description = "专为零基础小白用户打造的梯子与机场测速评测、选购避坑及客户端配置指南。主要内容涵盖高性价比稳定机场推荐、主流代理客户端新手图文教程、节点测速与防失联备用方案。",
+  canonical = Astro.url.href,
+  image = "https://jcslbang.homes/og-image.png",
+  type = "website"
+} = Astro.props;
+
+const siteName = "机场实力榜";
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonical} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={image} />
+<meta property="og:site_name" content={siteName} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonical} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={image} />
+
+<!-- JSON-LD WebSite & Breadcrumb -->
+<script type="application/ld+json" is:inline set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "机场实力榜",
+  "alternateName": "jcslbang.homes",
+  "url": "https://jcslbang.homes",
+  "description": description,
+  "inLanguage": "zh-CN"
+})} />

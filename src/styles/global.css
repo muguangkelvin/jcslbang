@@ -1,0 +1,303 @@
+/* src/styles/global.css */
+
+/* ==========================================================================
+   Article Text Typography & Spacing Overrides (Prose / Markdown / MDX)
+   ========================================================================== */
+
+/* Base font size and line height for prose content */
+.prose,
+.content,
+article {
+  max-width: 100% !important;
+  font-size: 1.03125rem !important; /* 16.5px (between 16px - 17px) */
+  line-height: 1.8 !important; /* 1.8 line-height for ample breathing space */
+  color: #334155 !important;
+}
+
+.dark .prose,
+.dark .content,
+.dark article {
+  color: #cbd5e1 !important;
+}
+
+/* Paragraph spacing */
+.prose p,
+.content p,
+article p {
+  font-size: 1.03125rem !important; /* 16.5px */
+  line-height: 1.8 !important; /* Breathing room between lines */
+  margin-top: 0 !important;
+  margin-bottom: 1.25rem !important; /* 20px spacing between paragraphs */
+}
+
+/* Consecutive Paragraphs */
+.prose p + p,
+.content p + p,
+article p + p {
+  margin-top: 0.75rem !important;
+}
+
+/* Headings spacing & line-height */
+.prose h1,
+.content h1,
+article h1 {
+  font-size: 2.25rem !important;
+  line-height: 1.3 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1.25rem !important;
+  font-weight: 900 !important;
+  color: #0f172a !important;
+}
+
+.dark .prose h1,
+.dark .content h1,
+.dark article h1 {
+  color: #f8fafc !important;
+}
+
+.prose h2,
+.content h2,
+article h2 {
+  font-size: 1.5rem !important; /* 24px */
+  line-height: 1.4 !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 1.25rem !important;
+  font-weight: 800 !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  padding-bottom: 0.5rem !important;
+  color: #0f172a !important;
+}
+
+.dark .prose h2,
+.dark .content h2,
+.dark article h2 {
+  color: #f8fafc !important;
+  border-bottom-color: #334155 !important;
+}
+
+.prose h3,
+.content h3,
+article h3 {
+  font-size: 1.25rem !important; /* 20px */
+  line-height: 1.45 !important;
+  margin-top: 1.75rem !important;
+  margin-bottom: 1rem !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+}
+
+.dark .prose h3,
+.dark .content h3,
+.dark article h3 {
+  color: #f8fafc !important;
+}
+
+.prose h4,
+.content h4,
+article h4 {
+  font-size: 1.125rem !important;
+  line-height: 1.5 !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+}
+
+.dark .prose h4,
+.dark .content h4,
+.dark article h4 {
+  color: #f8fafc !important;
+}
+
+/* Lists spacing and line height */
+.prose ul,
+.prose ol,
+.content ul,
+.content ol,
+article ul,
+article ol {
+  margin-top: 0.75rem !important;
+  margin-bottom: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+
+.prose li,
+.content li,
+article li {
+  font-size: 1.03125rem !important;
+  line-height: 1.8 !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.75rem !important; /* Spacing between list items */
+}
+
+/* Bold / Strong prefix spacing (e.g., <strong>链路质量与架构选型：</strong> 正文...) */
+.prose li strong,
+.content li strong,
+article li strong,
+.prose p strong,
+.content p strong,
+article p strong {
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  margin-right: 4px !important;
+  display: inline !important;
+}
+
+.dark .prose li strong,
+.dark .content li strong,
+.dark article li strong,
+.dark .prose p strong,
+.dark .content p strong,
+.dark article p strong {
+  color: #f8fafc !important;
+}
+
+/* Blockquotes & Horizontal rules */
+.prose blockquote,
+.content blockquote,
+article blockquote {
+  margin-top: 1.75rem !important;
+  margin-bottom: 1.75rem !important;
+  padding: 1rem 1.25rem !important;
+  border-left: 4px solid #2563eb !important;
+  background-color: #f8fafc !important;
+  border-radius: 0 0.5rem 0.5rem 0 !important;
+  font-style: normal !important;
+  line-height: 1.8 !important;
+}
+
+.dark .prose blockquote,
+.dark .content blockquote,
+.dark article blockquote {
+  background-color: #1e293b !important;
+}
+
+.prose hr,
+.content hr,
+article hr {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+  border-color: #e2e8f0 !important;
+}
+
+.dark .prose hr,
+.dark .content hr,
+.dark article hr {
+  border-color: #334155 !important;
+}
+
+/* ==========================================================================
+   Global Table Styles for Markdown, MDX, and Prose content
+   ========================================================================== */
+.table-wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  margin-top: 1.75rem !important;
+  margin-bottom: 1.75rem !important;
+  border-radius: 0.75rem !important;
+  border: 1px solid rgba(226, 232, 240, 0.9) !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04) !important;
+  background-color: #ffffff !important;
+}
+
+.dark .table-wrapper {
+  border-color: rgba(51, 65, 85, 0.8) !important;
+  background-color: #0f172a !important;
+}
+
+/* Table core rules */
+.prose table,
+.content table,
+article table,
+.table-wrapper table {
+  width: 100% !important;
+  min-width: 850px !important;
+  border-collapse: collapse !important;
+  margin: 0 !important;
+  font-size: 0.9375rem !important;
+  line-height: 1.6 !important;
+  text-align: left !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+}
+
+/* Table Header (th) */
+.prose th,
+.content th,
+article th,
+.table-wrapper th {
+  padding: 13px 16px !important;
+  font-size: 0.9375rem !important;
+  font-weight: 700 !important;
+  vertical-align: middle !important;
+  white-space: nowrap !important;
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  border-bottom: 2px solid #e2e8f0 !important;
+}
+
+.dark .prose th,
+.dark .content th,
+.dark article th,
+.dark .table-wrapper th {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border-bottom-color: #334155 !important;
+}
+
+/* Table Cells (td) */
+.prose td,
+.content td,
+article td,
+.table-wrapper td {
+  padding: 13px 16px !important;
+  font-size: 0.9375rem !important;
+  line-height: 1.6 !important;
+  vertical-align: middle !important;
+  color: #334155 !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+}
+
+.dark .prose td,
+.dark .content td,
+.dark article td,
+.dark .table-wrapper td {
+  color: #cbd5e1 !important;
+  border-bottom-color: #1e293b !important;
+}
+
+/* Row Hover Effect */
+.prose tr:hover td,
+.content tr:hover td,
+article tr:hover td,
+.table-wrapper tr:hover td {
+  background-color: #f8fafc/60 !important;
+}
+
+.dark .prose tr:hover td,
+.dark .content tr:hover td,
+.dark article tr:hover td,
+.dark .table-wrapper tr:hover td {
+  background-color: #1e293b/50 !important;
+}
+
+/* Specific Column Tuning */
+.prose td:first-child,
+.content td:first-child,
+article td:first-child,
+.table-wrapper td:first-child {
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+  color: #0f172a !important;
+}
+
+.dark .prose td:first-child,
+.dark .content td:first-child,
+.dark article td:first-child,
+.dark .table-wrapper td:first-child {
+  color: #f8fafc !important;
+}

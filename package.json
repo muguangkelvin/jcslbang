@@ -1,0 +1,19 @@
+{
+  "name": "jcslbang.homes",
+  "version": "1.0.0",
+  "description": "机场实力榜 - 专为零基础小白用户打造的梯子与机场测速评测、选购避坑及客户端配置指南",
+  "main": "index.js",
+  "scripts": {
+    "build": "node scripts/build-search-index.js && astro build",
+    "dev": "astro dev",
+    "preview": "astro preview"
+  },
+  "keywords": [
+    "机场实力榜",
+    "梯子实力榜",
+    "2026机场推荐",
+    "稳定机场推荐"
+  ],
+  "author": "jcslbang.homes",
+  "license": "ISC"
+}

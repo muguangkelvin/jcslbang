@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+
+<BaseLayout title="评测方法 - 机场实力榜 | jcslbang.homes" description="机场实力榜 的节点测速方法、晚高峰压力测试指标、4K视频拖拽率与流媒体/AI解锁测试流程。">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    <Breadcrumbs items={[{ label: '评测方法' }]} />
+
+    <!-- Page Header Banner -->
+    <div class="p-6 sm:p-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl text-white shadow-lg space-y-3">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-bold">
+        <span>🔬 科学定量 · 多网压测 · 流媒体解锁 · 节点稳定性</span>
+      </div>
+      <h1 class="text-2xl sm:text-4xl font-black">评测方法与跑分测试标准</h1>
+      <p class="text-sm sm:text-base text-blue-100 leading-relaxed max-w-3xl">
+        机场实力榜采用标准化、可复现的评测流程，对全网 28 家精选机场进行多维度跑分。以下是编辑部测试核心指标与变量控制说明。
+      </p>
+    </div>
+
+    <!-- Main Content Container -->
+    <article class="prose prose-slate dark:prose-invert max-w-none bg-white dark:bg-slate-900 p-6 sm:p-10 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-8">
+      
+      <!-- Section 1 -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>📶</span>
+          <span>1. 晚高峰 RTT 延迟与丢包率测试</span>
+        </h2>
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          测试时间统一设在每日 <strong>20:00 - 22:00（网络流量高峰期）</strong>。我们通过位于广州、上海、北京的测试节点，对机场的香港、日本、新加坡及美国入口发起 MTR / Ping 连续打包测试，监控平均 RTT 延迟与丢包率（Packet Loss %）。
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>🎬</span>
+          <span>2. 4K / 8K 高清视频拖拽体验</span>
+        </h2>
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          使用 YouTube 开启 4K 60fps 格式视频，使用 Stats for nerds（极客统计）功能监控连接速度（Connection Speed）。合格标准为：初始加载时间 < 1.5 秒，缓冲码率维持在 <strong>25,000 Kbps 以上</strong>，连续拖拽进度条不掉帧、不卡顿。
+        </p>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>🤖</span>
+          <span>3. AI 工具与流媒体解锁连通率</span>
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
+          <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700/80 space-y-1">
+            <h3 class="font-bold text-slate-900 dark:text-white text-sm">🤖 ChatGPT / Claude 解锁</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300">
+              测试节点 IP 是否被 OpenAI / Anthropic 封锁，是否能顺畅访问 Web 界面及 API 接口。
+            </p>
+          </div>
+          <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700/80 space-y-1">
+            <h3 class="font-bold text-slate-900 dark:text-white text-sm">🍿 Netflix / Disney+ 解锁</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300">
+              测试节点是否支持非自制剧播放（住宅原生 IP），以及 Disney+、TikTok 跨区访问连通率。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4 -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>⚙️</span>
+          <span>4. 客户端适配与傻瓜式导入测试</span>
+        </h2>
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          测试机场订阅链接在 <strong>Clash Verge Rev</strong>、<strong>Shadowrocket (小火箭)</strong>、<strong>Sing-box</strong> 及 <strong>v2rayN</strong> 上的解析兼容性，确保一键订阅功能正常、分流规则配置完整。
+        </p>
+      </section>
+
+    </article>
+  </div>
+</BaseLayout>

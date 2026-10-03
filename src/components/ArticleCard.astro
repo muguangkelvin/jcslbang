@@ -1,0 +1,38 @@
+---
+import { getReadMoreText } from '../utils/getReadMoreText.js';
+
+export interface Props {
+  post: any;
+  categorySlug?: string;
+  defaultCategoryLabel?: string;
+}
+
+const { post, categorySlug, defaultCategoryLabel } = Astro.props;
+
+const readMoreText = getReadMoreText(post);
+const categoryLabel = post.data?.category || defaultCategoryLabel || '精选推荐';
+
+const slug = post.slug || post.id;
+const prefix = categorySlug ? `/${categorySlug}` : (post.collection ? `/${post.collection}` : '');
+const href = slug.startsWith('/') ? slug : `${prefix}/${slug}`;
+---
+
+<a href={href} class="group block p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700/80 shadow-sm hover:shadow-md hover:border-blue-400 transition-all flex flex-col justify-between">
+  <div class="space-y-3">
+    <span class="px-2.5 py-0.5 text-xs font-bold bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded inline-block">
+      {categoryLabel}
+    </span>
+    <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2">
+      {post.data.title}
+    </h3>
+    <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-3 leading-relaxed">
+      {post.data.description}
+    </p>
+  </div>
+  <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-700/50 flex items-center justify-between text-xs">
+    <span class="text-slate-400">更新：{post.data.pubDate || '2026-09-19'}</span>
+    <span class="font-bold text-blue-600 dark:text-blue-400 group-hover:translate-x-1 transition-transform flex items-center gap-1">
+      {readMoreText}
+    </span>
+  </div>
+</a>

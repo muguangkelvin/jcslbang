@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+
+<BaseLayout title="联盟与邀请链接披露 - 机场实力榜 | jcslbang.homes" description="说明机场实力榜 的邀请链接收益、第三方推广合作关系与编辑独立性保证。">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    <Breadcrumbs items={[{ label: '联盟与邀请链接披露' }]} />
+
+    <!-- Page Header Banner -->
+    <div class="p-6 sm:p-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl text-white shadow-lg space-y-3">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-bold">
+        <span>🤝 链接透明 · 无额外开销 · 运营维护 · 独立评测</span>
+      </div>
+      <h1 class="text-2xl sm:text-4xl font-black">联盟与邀请链接披露</h1>
+      <p class="text-sm sm:text-base text-blue-100 leading-relaxed max-w-3xl">
+        本站遵循严格的透明度原则。为了维持博客服务器、域名及全球测速节点的日常运维开销，本站部分跳转按钮包含第三方服务商的联盟或邀请代码。
+      </p>
+    </div>
+
+    <!-- Main Content Container -->
+    <article class="prose prose-slate dark:prose-invert max-w-none bg-white dark:bg-slate-900 p-6 sm:p-10 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-8">
+      
+      <!-- Section 1 -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>🔗</span>
+          <span>1. 邀请链接与代码标记</span>
+        </h2>
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          全站所有前往第三方官网的注册链接（如带有优惠码 `ld888` 的灵动云、`mm88` 的暮光网络、`flycat888` 的飞猫云，以及微风网络等）均设置有符合规范的属性标记：<code class="text-blue-600 font-mono">rel="sponsored nofollow noopener" target="_blank"</code>。
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>💡</span>
+          <span>2. 对读者的影响声明</span>
+        </h2>
+        <div class="p-4 bg-emerald-50/50 dark:bg-emerald-950/30 rounded-xl border border-emerald-200/80 dark:border-emerald-900/60 space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+          <p>• <strong>零额外费用</strong>：通过本站邀请链接跳转注册，绝不会增加您的套餐购买金额，相反您还可以使用本站提供的专属优惠码享受折扣。</p>
+          <p>• <strong>持续运营支持</strong>：当您成功购买套餐后，第三方服务商可能会向本站支付极少量的技术佣金，用于支持我们继续产出高质量的保姆级教程与客观测速文章。</p>
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>🛡️</span>
+          <span>3. 独立性与客观原则</span>
+        </h2>
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          联盟合作绝不影响本站对该服务商的质量判断。若某家合作机场出现频繁掉线、屏蔽节点或不妥善处理工单的情况，编辑部将予以降低排名或彻底终止合作。
+        </p>
+      </section>
+
+    </article>
+  </div>
+</BaseLayout>

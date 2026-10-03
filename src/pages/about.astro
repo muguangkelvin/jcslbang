@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+
+<BaseLayout title="关于我们 - 机场实力榜 | jcslbang.homes" description="关于机场实力榜 的编辑定位、客观实测准则、推荐原则与服务宗旨。专为零基础小白打造的高稳定梯子与机场测评指南。">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    <Breadcrumbs items={[{ label: '关于我们' }]} />
+
+    <!-- Page Header Banner -->
+    <div class="p-6 sm:p-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl text-white shadow-lg space-y-3">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-bold">
+        <span>🚀 品牌心智 · 客观实测 · 性能榜单 · 硬核排雷</span>
+      </div>
+      <h1 class="text-2xl sm:text-4xl font-black">关于机场实力榜</h1>
+      <p class="text-sm sm:text-base text-blue-100 leading-relaxed max-w-3xl">
+        专注于提供真实测速数据与小白友好型科学上网指南；涵盖高性价比稳定梯子推荐、主流代理客户端使用教程及低延迟专线评测；全站纯技术分享，助力安全顺畅访问全球网络。
+      </p>
+    </div>
+
+    <!-- Main Content Container -->
+    <article class="prose prose-slate dark:prose-invert max-w-none bg-white dark:bg-slate-900 p-6 sm:p-10 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-8">
+      
+      <!-- Section 1 -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>🎯</span>
+          <span>网站定位与服务宗旨</span>
+        </h2>
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          <strong>机场实力榜</strong> 是专为零基础小白用户打造的梯子与机场测速评测、选购避坑及客户端配置指南平台。在科学上网服务鱼龙混杂的当下，新手用户往往面临“跑路机场多、虚假高倍率、晚高峰卡顿严重、客户端不会配置”等痛点。
+        </p>
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          我们秉持“客观实测、数据说话、小白优先”的评测准则，通过全天候 24 小时节点连通率监控、晚高峰 8-10 点带宽跑分测试，为全球中文用户筛选真实可信的高性价比代理服务。
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>⭐</span>
+          <span>四大核心编辑特色</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose">
+          <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200/80 dark:border-slate-700/80 space-y-2">
+            <h3 class="font-bold text-slate-900 dark:text-white text-base flex items-center gap-2">
+              <span class="text-blue-600">📊</span> 客观真实测速
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              拒绝无根据的吹捧与虚假广告。所有推荐均附带独立核验日期，结合真实 RTT 延迟与 4K 视频播放码率做出客观评级。
+            </p>
+          </div>
+          <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200/80 dark:border-slate-700/80 space-y-2">
+            <h3 class="font-bold text-slate-900 dark:text-white text-base flex items-center gap-2">
+              <span class="text-emerald-600">🔰</span> 小白保姆级教学
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              覆盖 Clash Verge Rev、Shadowrocket (小火箭)、Sing-box 及 v2rayN 图文教学，提供零基础一键订阅导入说明。
+            </p>
+          </div>
+          <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200/80 dark:border-slate-700/80 space-y-2">
+            <h3 class="font-bold text-slate-900 dark:text-white text-base flex items-center gap-2">
+              <span class="text-indigo-600">⚡</span> 专线与流媒体解锁
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              重点测评 IPLC / IEPL 低延迟专线，监控 ChatGPT (OpenAI)、Claude、TikTok 及 Netflix 原生 IP 解锁连通率。
+            </p>
+          </div>
+          <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200/80 dark:border-slate-700/80 space-y-2">
+            <h3 class="font-bold text-slate-900 dark:text-white text-base flex items-center gap-2">
+              <span class="text-amber-600">🛡️</span> 双机防失联方案
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              倡导“主用+低成本备用”的双机场选购策略，指导用户以极低月费搭建防断网容灾方案。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>🏆</span>
+          <span>编辑部精选服务梯队</span>
+        </h2>
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          基于最新多时段实测数据，本站自营与核心推荐顺位保持如下：
+        </p>
+        <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-200 list-disc list-inside">
+          <li><strong>#1 灵动云 (LingDong Cloud)</strong>：全站第一推荐，多地区出口，全端解锁 AI，弹性灵活套餐。</li>
+          <li><strong>#2 暮光网络 (Twilight)</strong>：流媒体 4K 影音推荐，原生 IP 解锁，BGP 中转与专线直连。</li>
+          <li><strong>#3 飞猫云 (FlyCat Cloud)</strong>：极致性价比首选，折合低至 7元/月，适配 Clash 与小火箭。</li>
+          <li><strong>#4 微风网络 (Breezenet)</strong>：老牌稳健中转，节点响应快速，傻瓜式订阅导入。</li>
+        </ul>
+      </section>
+
+      <!-- Section 4 -->
+      <section class="p-6 bg-blue-50/50 dark:bg-blue-950/30 rounded-2xl border border-blue-200 dark:border-blue-900/60 space-y-3">
+        <h3 class="text-base font-bold text-blue-900 dark:text-blue-200 flex items-center gap-2">
+          <span>✈️</span> 官方防失联与反馈渠道
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          为了确保广大读者在特殊时期也能第一时间获取最新的备用节点、优惠折扣与客户端更正说明，请收藏本站并加入官方防失联频道：
+        </p>
+        <div class="pt-2">
+          <a
+            href="https://t.me/+rGDXqHbxorZjN2Jl"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs transition-colors shadow-sm"
+          >
+            <span>✈️ 点击加入 TG 官方防失联频道</span>
+          </a>
+        </div>
+      </section>
+
+    </article>
+  </div>
+</BaseLayout>

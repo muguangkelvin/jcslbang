@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+const articles = await getCollection('clients');
+---
+
+<BaseLayout title="客户端教程 - 机场实力榜 | jcslbang.homes" description="Clash Verge Rev、Shadowrocket (小火箭)、Sing-box 及 v2rayN 保姆级使用教学。包含 25 篇配置图解。">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    <Breadcrumbs items={[{ label: '客户端教程' }]} />
+
+    <div class="border-b border-slate-200 dark:border-slate-800 pb-6 space-y-2">
+      <h1 class="text-3xl font-black text-slate-900 dark:text-white flex items-center gap-2">
+        <span>📁</span>
+        <span>客户端教程</span>
+      </h1>
+      <p class="text-slate-600 dark:text-slate-300 text-sm">
+        Clash Verge Rev、Shadowrocket (小火箭)、Sing-box 及 v2rayN 保姆级使用教学。包含 25 篇配置图解。
+      </p>
+    </div>
+
+    <!-- Article Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {articles.map(a => (
+        <ArticleCard post={a} categorySlug="clients" defaultCategoryLabel="客户端教程" />
+      ))}
+    </div>
+  </div>
+</BaseLayout>

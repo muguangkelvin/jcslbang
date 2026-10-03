@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ProviderCard from '../../components/ProviderCard.astro';
+import providersData from '../../data/providers.json';
+
+const primaryProviders = providersData.filter(p => p.isPrimary);
+---
+
+<BaseLayout title="2026机场推荐榜 - 4大主推梯子服务选购避坑指南 | jcslbang.homes" description="2026机场推荐榜单。精选全球云、飞猫云、暮光网络、微风网络4大高稳定性服务商，包含月付价格、流量、专线支持与官网注册入口。">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    <Breadcrumbs items={[{ label: '机场推荐' }]} />
+
+    <div class="border-b border-slate-200 dark:border-slate-800 pb-6 space-y-2">
+      <h1 class="text-3xl font-black text-slate-900 dark:text-white flex items-center gap-2">
+        <span>🏆</span>
+        <span>2026 机场实力推荐榜单</span>
+      </h1>
+      <p class="text-slate-600 dark:text-slate-300 text-sm">
+        结合编辑部多时段丢包率与晚高峰速度测速，优先推荐以下 4 家高质量稳定性服务。
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {primaryProviders.map(p => (
+        <ProviderCard
+          rank={p.rank}
+          name={p.name}
+          slug={p.slug}
+          inviteURL={p.inviteURL}
+          priceFrom={p.priceFrom}
+          trafficFrom={p.trafficFrom}
+          coupon={p.coupon}
+          suitableFor={p.suitableFor}
+          summary={p.summary}
+          isPrimary={true}
+        />
+      ))}
+    </div>
+
+    <div class="pt-8 text-center">
+      <a href="/providers" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow">
+        查看全网全部 28 家机场合集目录 →
+      </a>
+    </div>
+  </div>
+</BaseLayout>

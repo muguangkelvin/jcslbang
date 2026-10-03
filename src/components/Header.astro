@@ -1,0 +1,105 @@
+---
+import SearchModal from './SearchModal.astro';
+
+const navItems = [
+  { label: '实力榜单', url: '/ranks' },
+  { label: '新手入门', url: '/guides' },
+  { label: '客户端教程', url: '/clients' },
+  { label: '专线特选', url: '/lines' },
+  { label: '避坑答疑', url: '/faq' },
+  { label: '机场合集', url: '/providers' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-40 w-full backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200/80 dark:border-slate-800/80 transition-colors">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <!-- Brand Logo -->
+    <a href="/" class="flex items-center gap-2 text-slate-900 dark:text-white font-black text-xl tracking-tight hover:opacity-90 transition-opacity">
+      <span class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white text-base shadow-sm">🚀</span>
+      <span>机场实力榜</span>
+    </a>
+
+    <!-- Desktop Nav Links -->
+    <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+      {navItems.map(item => {
+        const isActive = currentPath.startsWith(item.url);
+        return (
+          <a
+            href={item.url}
+            class={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+              isActive
+                ? 'bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 font-bold'
+                : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800'
+            }`}
+          >
+            {item.label}
+          </a>
+        );
+      })}
+    </nav>
+
+    <!-- Right Controls: Search & Telegram Link -->
+    <div class="flex items-center gap-2">
+      <!-- Search Input Trigger -->
+      <button
+        onclick="window.openGlobalSearch && window.openGlobalSearch()"
+        class="flex items-center gap-2 px-3 py-1.5 text-xs text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors"
+        aria-label="全局智能搜索"
+      >
+        <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+        <span class="hidden sm:inline">搜索...</span>
+        <kbd class="hidden md:inline-block px-1.5 py-0.5 text-[10px] font-mono bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 rounded text-slate-400">Ctrl K</kbd>
+      </button>
+
+      <!-- TG Channel Button -->
+      <a
+        href="https://t.me/+rGDXqHbxorZjN2Jl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-white bg-sky-500 hover:bg-sky-600 rounded-lg shadow-sm transition-colors"
+      >
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+        </svg>
+        <span class="hidden lg:inline">TG频道</span>
+      </a>
+
+      <!-- Mobile Hamburger Menu Button -->
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
+        aria-label="切换菜单"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Nav Menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-2 pb-4 space-y-1">
+    {navItems.map(item => (
+      <a
+        href={item.url}
+        class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+      >
+        {item.label}
+      </a>
+    ))}
+  </div>
+</header>
+
+<SearchModal />
+
+<script is:inline>
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  mobileBtn?.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>

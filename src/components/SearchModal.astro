@@ -1,0 +1,120 @@
+---
+---
+
+<div id="search-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-start justify-center pt-16 px-4">
+  <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[80vh]">
+    <!-- Search Bar Header -->
+    <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center gap-3">
+      <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+      </svg>
+      <input
+        id="search-input"
+        type="text"
+        placeholder="搜索核心词（实力榜、专线、Clash、小白避坑、魔法）..."
+        class="w-full bg-transparent text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none text-base"
+      />
+      <button id="close-search" class="p-1 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 bg-slate-100 dark:bg-slate-800 text-xs font-mono px-2">
+        ESC
+      </button>
+    </div>
+
+    <!-- Search Results Container -->
+    <div id="search-results" class="p-4 overflow-y-auto space-y-3 flex-1 min-h-[200px]">
+      <div class="text-center text-slate-400 py-8 text-sm">
+        输入关键词或拼音（如 clash, iplc, 测速, 订阅）进行即时检索
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script is:inline>
+  let fuseInstance = null;
+  let searchIndexData = [];
+
+  async function initSearch() {
+    if (fuseInstance) return;
+    try {
+      const res = await fetch('/search-index.json');
+      searchIndexData = await res.json();
+      fuseInstance = new Fuse(searchIndexData, {
+        keys: [
+          { name: 'title', weight: 10 },
+          { name: 'keywords', weight: 8 },
+          { name: 'search_synonyms', weight: 8 },
+          { name: 'tags', weight: 6 },
+          { name: 'category', weight: 4 },
+          { name: 'description', weight: 2 },
+          { name: 'body', weight: 1 }
+        ],
+        threshold: 0.4,
+        distance: 100
+      });
+    } catch (e) {
+      console.error('Failed to load search index:', e);
+    }
+  }
+
+  const modal = document.getElementById('search-modal');
+  const input = document.getElementById('search-input');
+  const resultsContainer = document.getElementById('search-results');
+  const closeBtn = document.getElementById('close-search');
+
+  function openModal() {
+    modal.classList.remove('hidden');
+    input.focus();
+    initSearch();
+  }
+
+  function closeModal() {
+    modal.classList.add('hidden');
+    input.value = '';
+    resultsContainer.innerHTML = '<div class="text-center text-slate-400 py-8 text-sm">输入关键词或拼音进行即时检索</div>';
+  }
+
+  window.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      if (modal.classList.contains('hidden')) {
+        openModal();
+      } else {
+        closeModal();
+      }
+    }
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+      closeModal();
+    }
+  });
+
+  closeBtn?.addEventListener('click', closeModal);
+  modal?.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  input?.addEventListener('input', (e) => {
+    const query = e.target.value.trim();
+    if (!query || !fuseInstance) {
+      resultsContainer.innerHTML = '<div class="text-center text-slate-400 py-8 text-sm">输入关键词或拼音进行即时检索</div>';
+      return;
+    }
+
+    const results = fuseInstance.search(query).slice(0, 10);
+    if (results.length === 0) {
+      resultsContainer.innerHTML = '<div class="text-center text-slate-400 py-8 text-sm">未匹配到相关文章，请尝试搜索“机场”、“专线”、“Clash”等关键词</div>';
+      return;
+    }
+
+    resultsContainer.innerHTML = results.map(({ item }) => `
+      <a href="${item.url}" class="block p-3 rounded-xl bg-slate-50 dark:bg-slate-800/80 hover:bg-blue-50 dark:hover:bg-blue-900/30 border border-slate-200 dark:border-slate-700/50 transition-all">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="px-2 py-0.5 text-xs font-bold bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded">${item.category}</span>
+          <h4 class="text-sm font-bold text-slate-900 dark:text-white truncate">${item.title}</h4>
+        </div>
+        <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-2">${item.description}</p>
+      </a>
+    `).join('');
+  });
+
+  window.openGlobalSearch = openModal;
+</script>

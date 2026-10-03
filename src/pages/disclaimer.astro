@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+
+<BaseLayout title="免责声明 - 机场实力榜 | jcslbang.homes" description="说明机场实力榜 的免责条款、第三方服务风险与无担保提示。">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    <Breadcrumbs items={[{ label: '免责声明' }]} />
+
+    <!-- Page Header Banner -->
+    <div class="p-6 sm:p-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl text-white shadow-lg space-y-3">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-bold">
+        <span>⚠️ 免责条款 · 风险提示 · 独立决策 · 结算页为准</span>
+      </div>
+      <h1 class="text-2xl sm:text-4xl font-black">免责声明</h1>
+      <p class="text-sm sm:text-base text-blue-100 leading-relaxed max-w-3xl">
+        请在访问和使用机场实力榜 之前仔细阅读以下免责条款。使用本站内容即视为您认可并同意接受本声明中的全部事项。
+      </p>
+    </div>
+
+    <!-- Main Content Container -->
+    <article class="prose prose-slate dark:prose-invert max-w-none bg-white dark:bg-slate-900 p-6 sm:p-10 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-8">
+      
+      <!-- Section 1 -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>1️⃣</span>
+          <span>第三方服务独立性免责</span>
+        </h2>
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          本站所展示、测评或推荐的所有第三方机场（如灵动云、暮光网络、飞猫云、微风网络等全网 28 家机场）均为独立的第三方运营主体。本站与第三方服务商不存在直接的公司控股关系。第三方机场的运行质量、节点连通率、财务状况及运营决策完全由该服务商自行负责，本站不对其提供无条件连通保障或资金担保。
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>2️⃣</span>
+          <span>价格与套餐时效性声明</span>
+        </h2>
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          本站文章与对比表中列出的套餐价格、流量配额及优惠折扣码均为编辑测试时的客观记录。因第三方服务商随时可能进行产品调整，<strong>所有价格、流量及优惠促销信息均以第三方服务当前官网结算页的实时展示为准</strong>。
+        </p>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>3️⃣</span>
+          <span>用户决策与风险自负</span>
+        </h2>
+        <div class="p-4 bg-amber-50/50 dark:bg-amber-950/30 rounded-xl border border-amber-200/80 dark:border-amber-900/60 space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+          <p>• 读者根据本站提供的信息购买第三方服务均属个人自主消费决策，本站不对读者购买第三方套餐产生的直接或间接经济损失承担赔偿责任。</p>
+          <p>• 我们强烈建议零基础小白用户优先选择<strong>月付或低成本套餐</strong>，并建立双机场容灾备用方案，将潜在的网络风险降至最低。</p>
+        </div>
+      </section>
+
+    </article>
+  </div>
+</BaseLayout>

@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+
+<BaseLayout title="纠错与更新政策 - 机场实力榜 | jcslbang.homes" description="说明机场实力榜 的资料纠错提交流程、修改记录与更新审核规则。">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    <Breadcrumbs items={[{ label: '纠错与更新政策' }]} />
+
+    <!-- Page Header Banner -->
+    <div class="p-6 sm:p-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl text-white shadow-lg space-y-3">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-bold">
+        <span>🔄 及时更新 · 严谨复核 · 开放纠错 · 数据保真</span>
+      </div>
+      <h1 class="text-2xl sm:text-4xl font-black">纠错与更新政策</h1>
+      <p class="text-sm sm:text-base text-blue-100 leading-relaxed max-w-3xl">
+        科学上网服务商的价格、流量套餐、节点协议与优惠折扣变动频繁。编辑部制定了透明快速的纠错机制，保障全站信息的准确性。
+      </p>
+    </div>
+
+    <!-- Main Content Container -->
+    <article class="prose prose-slate dark:prose-invert max-w-none bg-white dark:bg-slate-900 p-6 sm:p-10 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-8">
+      
+      <!-- Section 1 -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>🛠️</span>
+          <span>1. 提交纠错的典型场景</span>
+        </h2>
+        <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside leading-relaxed">
+          <li><strong>优惠码失效</strong>：若文中标注的优惠折扣码已过期或不可用。</li>
+          <li><strong>价格套餐调整</strong>：第三方机场调整了月付/年付价格或流量配额。</li>
+          <li><strong>节点连通性变动</strong>：某家机场新增或删除了某些节点地区、协议支持（如支持 Sing-box / Hysteria2）。</li>
+          <li><strong>官网入口变更</strong>：第三方官网发布了最新的备用防失联域名。</li>
+        </ul>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>⏳</span>
+          <span>2. 复核与更新时效</span>
+        </h2>
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          在收到读者的纠错信息后，编辑部将在 <strong>24 小时内</strong> 完成第三方页面与节点的实际测试。经复核属实后，我们将立即更新对应的文章内容、对比表及【最后核验日期】。
+        </p>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="p-6 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700/80 space-y-3 not-prose">
+        <h3 class="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+          <span>✈️</span> 纠错联系入口
+        </h3>
+        <p class="text-xs text-slate-600 dark:text-slate-300">
+          欢迎直接在 Telegram 官方频道中反馈纠错信息：<a href="https://t.me/+rGDXqHbxorZjN2Jl" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 font-mono underline">https://t.me/+rGDXqHbxorZjN2Jl</a>
+        </p>
+      </section>
+
+    </article>
+  </div>
+</BaseLayout>
