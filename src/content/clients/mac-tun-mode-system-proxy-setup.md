@@ -1,6 +1,6 @@
 ---
 title: "macOS 开启 TUN 模式与系统代理设置教程：解决终端与软件网络不走代理"
-description: "针对 macOS TUN 模式 的 2026 专业深度实测与保姆级配置指南，涵盖技术原理拆解、跑分对比、常见坑点规避与高效科学上网选型方案。"
+description: "针对 macOS 开启 TUN 模式与系统代理设置教程：解决终端与软件网络不走代理 的 2026 专业深度实测与保姆级配置指南，涵盖技术原理拆解、跑分对比、常见坑点规避与高效科学上网选型方案。"
 pubDate: "2026-09-19"
 updatedDate: "2026-09-20"
 category: "客户端教程"
@@ -12,53 +12,52 @@ featured: true
 
 # macOS 开启 TUN 模式与系统代理设置教程：解决终端与软件网络不走代理
 
-围绕 **macOS TUN 模式** 的使用需求，在进行 **系统代理与终端不走代理修复** 操作时，许多用户经常受到安装包来源安全、系统防火墙阻拦或订阅链接无法同步等困扰。本文将针对 **macOS TUN 模式** 开展系统拆解，覆盖安装环境搭建、订阅同步、TUN 模式配置与高频报错修复。
+在 macOS 系统中，很多用户在“系统偏好设置 -> 网络 -> 代理”中勾选 HTTP/SOCKS5 代理后，发现只有 Safari 和 Chrome 能够翻墙，而 Mac 终端 Terminal、curl 命令、git clone、Docker 以及各种内嵌 WebView 的第三方软件依然直接打出公网请求，频繁触发 `Connection timed out` 报错。
 
-## 一、macOS TUN 模式 的核心功能特点与适用环境
+这是由于 macOS 的标准系统代理仅针对符合 System Configuration 框架的应用生效，对于类 Unix 命令行工具并不强制生效。解决这一痛点的最佳方案正是开启 **TUN 虚拟网卡模式**。
 
-在正式进行 **系统代理与终端不走代理修复** 配置前，需重点确认以下网络参数与运行环境：
+## 一、为什么 macOS 终端 Terminal 与部分 App 默认不走系统代理？
 
-- **系统权限与网络扩展**：无论是 Windows、macOS 还是 Android/iOS 平台，首次运行时必须授权“创建 VPN 虚拟网卡”与“通过系统防火墙”权限。
-- **协议与代理内核支持**：现代代理客户端通常内置 Mihomo (Clash Meta) 或 Sing-box 内核，完美支持 Hysteria2、TUIC v5、REALITY 等抗封锁新协议。
-- **本地端口监听放行**：默认监听本地 HTTP/SOCKS5 端口 (通常为 7890 或 1080)，确保没有其他第三方安全软件占有相同端口。
+在 macOS 系统中，很多用户在“系统偏好设置 -> 网络 -> 代理”中勾选 HTTP/SOCKS5 代理后，发现只有 Safari 和 Chrome 能够翻墙，而 Mac 终端 Terminal、curl 命令、git clone、Docker 以及各种内嵌 WebView 的第三方软件依然直接打出公网请求，频繁触发 `Connection timed out` 报错。
 
-## 二、准备工作：正版 macOS TUN 模式 下载与环境预检
+这是由于 macOS 的标准系统代理仅针对符合 System Configuration 框架的应用生效，对于类 Unix 命令行工具并不强制生效。解决这一痛点的最佳方案正是开启 **TUN 虚拟网卡模式**。
 
-完成 **macOS TUN 模式** 的第一步在于获取干净安全的官方安装文件：
+## 二、macOS 开启 TUN 模式前的环境准备与系统扩展授权
 
-1. **从安全渠道下载**：建议直接访问 GitHub 官方仓库 Release 页面或经过验证的 App Store / Google Play 商店，切勿下载第三方修改版以防木马泄密。
-2. **检查系统时间偏差**：代理加密协议（如 VMess / VLESS）要求本地系统时间与标准北京时间误差不超过 60 秒，否则会导致所有节点 Ping 测试超时。
-3. **关闭冲突客户端**：退出正在后台运行的其他 VPN 或网路抓包软件，防止监听网卡产生抢占冲突。
+开启 TUN 模式需要借助于 macOS 系统的 Network Extension 接口：
 
-## 三、保姆级步骤：macOS TUN 模式 订阅导入与节点同步
+1. **客户端选型**：推荐使用支持 Mihomo (Clash Meta) 内核的最新版 Clash Verge Rev 或 Sing-box GUI Mac 客户端。
+2. **系统扩展授权**：首次点击开启 TUN 模式时，macOS 系统将弹出“系统扩展被阻止”警告。
+3. **隐私与安全性确认**：点击打开“系统设置 -> 隐私与安全性 -> 保护您的 Mac”，滚动到底部找到“已阻止加载来自开发者...的系统扩展”，点击“允许”并输入 Mac 开机密码授权。
 
-按照以下 4 个步骤，即可快速完成 **系统代理与终端不走代理修复** 节点拉取：
+## 三、在 Clash Verge Rev / Sing-box 中配置 TUN 虚拟网卡
 
-- **步骤 1：复制机场订阅地址**：登录你订阅的自营老牌机场后台（如 [灵动云](/providers/lingdong-cloud) 或 [暮光网络](/providers/twilight)），在控制面板中复制 Clash 或 Sing-box 订阅 URL。
-- **步骤 2：导入配置文件**：打开软件面板，进入“配置 (Profiles)”或“订阅”菜单，粘贴 URL 并点击“下载 / 同步”。
-- **步骤 3：保持智能规则分流 (Rule Mode)**：选中刚导入的配置，确保代理模式开启为“Rule (规则分流)”，使国内微信、百度流量直连，国外请求走代理。
-- **步骤 4：开启 TUN 模式 (可选)**：若需要让终端 Terminal、Git 命令行或外服游戏客户端代理，开启 TUN 虚拟网卡功能。
+以 Clash Verge Rev 为例，具体设置方法如下：
 
-## 四、常见代理客户端功能参数对比表
+- 打开设置 (Settings) -> 找到 **TUN 模式 (TUN Mode)** 开关并开启。
+- 此时代理内核会在 macOS 路由表中自动挂载 `utun` 虚拟接口。
+- 打开终端输入 `ifconfig` 命令，若看到 `utun3` 或 `utun4` 接口并分配了 `198.18.0.1` 虚拟 IP，说明 TUN 驱动已成功接管全盘网络。
 
-| 客户端软件名称 | 适用操作系统 | 核心代理内核 | TUN 模式支持 | 分流重写支持 | 适合用户类型 |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Clash Verge Rev** | Windows / macOS | Mihomo (Meta) | 支持 (一键勾选) | 支持 JS / YAML 扩展 | 追赶最新协议与桌面端首选 |
-| **Sing-box GUI** | 全平台 (Win/Mac/iOS/Android) | Sing-box 原生 | 支持 | 支持 JSON 规则集 | 追求极低内存占用与 Hy2 用户 |
-| **Shadowrocket (小火箭)** | iOS / iPadOS | 自研高效内核 | 支持 | 支持 JS 重写与去广告 | iPhone 苹果手机必备神器 |
-| **Surfboard (冲浪板)** | Android | 冲浪板内核 | 支持 | 支持托管规则 | 安卓原生极简界面用户 |
-| **v2rayN** | Windows | Xray / sing-box | 支持 | 支持路由切片 | 老牌稳健与多协议测试用户 |
+## 四、验证终端 Terminal、Git 与 Docker 是否成功挂载代理
 
-## 五、常见报错排查：解决 macOS TUN 模式 无法联网或超时
+开启 TUN 模式后，无需在 `~/.zshrc` 或 `~/.bash_profile` 中手动添加 `export http_proxy` 环境变量！在终端中直接运行：
 
-在配置 **macOS TUN 模式** 时如果遇到连接故障，可参考以下排查对账方案：
+```bash
+curl -v https://www.google.com
+```
 
-- **报错 1：节点全部显示 Timeout / -1ms**：检查系统时间是否同步，并确认机场订阅套餐未到期或流量未耗尽。
-- **报错 2：端口 7890 提示 Address inside use**：在任务管理器中彻底终止旧版代理进程，或将本地监听端口更改为 7899。
-- **报错 3：浏览器能上网但命令行不走代理**：开启 TUN 模式或在终端手动配置 HTTP_PROXY 环境变量。
+如果能迅速返回 HTTP 200 响应并输出出口 IP，说明整个 macOS 系统（包括 Git clone、pip install、brew 与 Docker 镜像拉取）均已成功通过代理加速。
 
-## 六、总结与使用建议
+| 报错现象 | 底层原因 | 解决方案 |
+| :--- | :--- | :--- |
+| **TUN 模式提示 Install Driver Failed** | 缺乏 macOS 管理员 Sudo 权限 | 在软件提示框中输入 Mac 开机密码许可 |
+| **Safari 能上网但终端无法连接** | TUN 驱动被系统安全拦截 | 在“隐私与安全性”中重新点“允许”系统扩展 |
+| **休眠唤醒后 Mac 整体断网** | 虚拟网卡未随休眠正确复位 | 在软件主界面关闭再重新开启系统代理开关 |
 
-掌握 **macOS TUN 模式** 的配置要点后，即可享受顺畅的网络体验。建议挑选节点稳定且具备专线架构的服务商（如 [灵动云](/providers/lingdong-cloud)）或高性价比备用机场（如 [飞猫云](/providers/flycat-cloud)）。
+## 五、macOS 代理失效与权限报错排查对账表
+
+## 六、总结
+
+通过配置 TUN 模式，macOS 能够真正实现全盘无死角的网络加速。建议搭配晚高峰无丢包的 IPLC 专线服务商（如 [灵动云](/providers/lingdong-cloud)），提升开发与娱乐效率。
 
 <div class="mt-8 p-6 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 not-prose"><h4 class="text-base font-bold text-slate-900 dark:text-white mb-3">🔗 延伸阅读与相关文章推荐</h4><div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm"><a href="/ranks/top-stable-vpn-ladder" class="text-blue-600 dark:text-blue-400 hover:underline">→ 2026 稳定梯子与翻墙机场综合实力榜</a><a href="/guides/clash-verge-rev-beginner-tutorial" class="text-blue-600 dark:text-blue-400 hover:underline">→ Clash Verge Rev 保姆级新手图文教程</a><a href="/guides/chatgpt-ip-blocked-solution-guide" class="text-blue-600 dark:text-blue-400 hover:underline">→ ChatGPT 1020 报错与 IP 风控完全解决指南</a><a href="/lines/iplc-dedicated-line-airport-guide" class="text-blue-600 dark:text-blue-400 hover:underline">→ IPLC 国际专线与 BGP 中转原理深度对比</a></div></div>
