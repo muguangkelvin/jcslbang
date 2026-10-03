@@ -12,46 +12,34 @@ featured: true
 
 # 科学上网新手入门指南：从零开始选择梯子与客户端配置
 
-欢迎来到科学上网的世界！对于初学者而言，理清以下三大基本概念即可轻松上手：
+## 科学上网新手入门指南：从零开始选择梯子与客户端配置 的核心功能与适用网络环境
+关于 科学上网新手入门指南：从零开始选择梯子与客户端配置 的实际使用需求，理清客户端的协议内核与系统网络接管权限是首要基础。本指南将为你展开系统拆解。
 
-1. **机场 (Airport Provider)**：提供海外节点与专线传输线路的服务商（如 [灵动云](/providers/lingdong-cloud)）。你可以将其理解为“网络加油站”。
-2. **订阅链接 (Subscription Link)**：包含机场所有节点配置信息的专属 URL，用于同步节点列表。
-3. **代理客户端 (Client App)**：运行在手机或电脑上的控制软件（如 Clash Verge Rev、Shadowrocket、Sing-box），负责接管本地网络流量。
+## 使用 科学上网新手入门指南：从零开始选择梯子与客户端配置 前的准备工作与系统权限放行
+建议从 GitHub 官方 Release 页面或正版商店获取安装包。安装后须放行系统防火墙与创建虚拟网卡 (VPN/TUN) 授权，并确保电脑/手机时间与标准北京时间同步。
 
-## 一、零基础概念拆解：科学上网的基础构架与三大要素
+## 科学上网新手入门指南：从零开始选择梯子与客户端配置 的核心操作流程：订阅导入与规则分流
+1. 登录自营机场后台（如 [灵动云](/providers/lingdong-cloud) 或 [暮光网络](/providers/twilight)）复制订阅 URL。
+2. 打开客户端添加 Profiles 配置并拉取节点。
+3. 保持选择 Rule 规则模式，开启国内流量直连放行、国外流量走代理。
 
-欢迎来到科学上网的世界！对于初学者而言，理清以下三大基本概念即可轻松上手：
+## 科学上网新手入门指南：从零开始选择梯子与客户端配置 进阶配置：开启 TUN 模式与防止 DNS 泄漏
+若需要让终端命令行、Git 或外服游戏走代理，在软件中开启 TUN 虚拟网卡模式。TUN 模式将挂载底栈网卡，强制接管全盘 TCP/UDP 流量。
 
-1. **机场 (Airport Provider)**：提供海外节点与专线传输线路的服务商（如 [灵动云](/providers/lingdong-cloud)）。你可以将其理解为“网络加油站”。
-2. **订阅链接 (Subscription Link)**：包含机场所有节点配置信息的专属 URL，用于同步节点列表。
-3. **代理客户端 (Client App)**：运行在手机或电脑上的控制软件（如 Clash Verge Rev、Shadowrocket、Sing-box），负责接管本地网络流量。
+## 科学上网新手入门指南：从零开始选择梯子与客户端配置 核心参数与全平台客户端支持横向对比
+以下为 科学上网新手入门指南：从零开始选择梯子与客户端配置 在主流操作系统中的兼容性与内核表现：
 
-## 二、零基础保姆级上手 3 步走流程
+## 针对 科学上网新手入门指南：从零开始选择梯子与客户端配置 的节点选择与落地 IP 解锁优化
+在日常使用时，若遇到 ChatGPT 1020 报错或 Netflix 无法播放，建议在节点列表中优先切换至住宅 Native 原生 IP 线路。
 
-只需按照以下 3 个步骤，即可轻松开启科学上网：
+## 科学上网新手入门指南：从零开始选择梯子与客户端配置 常见连接故障与节点超时排查 FAQ
+遇到节点全部 Timeout，优先点开系统时间自动同步。出现端口 7890 占用时，在任务管理器中结束旧进程。
 
-- **步骤 1：注册优质自营机场**：挑选运营稳定、线路扎实的老牌机场，根据自身需求选择月付或年付套餐。
-- **步骤 2：下载对应系统的客户端**：Windows/Mac 推荐 Clash Verge Rev；iPhone 推荐小火箭 Shadowrocket；Android 推荐 Surfboard。
-- **步骤 3：一键导入订阅与开启系统代理**：在机场后台复制订阅链接，导入软件后勾选“系统代理 (System Proxy)”，选择低延迟节点即可上网。
+| 客户端软件名称 | 适用操作系统 | 核心代理内核 | TUN 模式支持 | 分流重写支持 | 适合用户类型 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Clash Verge Rev** | Windows / macOS | Mihomo (Meta) | 支持 (一键勾选) | 支持 JS / YAML 扩展 | 追赶最新协议与桌面端首选 |
+| **Sing-box GUI** | 全平台 (Win/Mac/iOS/Android) | Sing-box 原生 | 支持 | 支持 JSON 规则集 | 追求极低内存占用与 Hy2 用户 |
+| **Shadowrocket (小火箭)** | iOS / iPadOS | 自研高效内核 | 支持 | 支持 JS 重写与去广告 | iPhone 苹果手机必备神器 |
 
-## 三、订阅方式与套餐预算规划对比表
+掌握 科学上网新手入门指南：从零开始选择梯子与客户端配置 的正确方法后，选择稳定的自营专线机场（如 [灵动云](/providers/lingdong-cloud)），即可畅享无界访问。
 
-## 四、新手避坑 5 大红线法则
-
-新手必须牢记的避坑规则：
-- **红线 1：切忌购买几块钱包年的垃圾机场**：此类机场节点极易超载跑路，晚高峰完全打不开网页。
-- **红线 2：保持规则分流 (Rule Mode)**：不要全局开启 Global 模式，否则国内微信、淘宝也会走代理，浪费流量且变慢。
-- **红线 3：定期手动更新订阅**：网络节点 IP 会定期维护更新，每周在客户端手动点一次“更新订阅”。
-
-| 套餐类型 | 预算范围 | 适用人群 | 线路品质 | 风险与建议 |
-| :--- | :--- | :--- | :--- | :--- |
-| **标准月付套餐** | 15 - 30 元/月 | 绝大多数普通用户 | 包含 BGP 中转与专线 | 灵活性高，试错成本低，最推荐 |
-| **超值年付套餐** | 84 - 200 元/年 | 长期稳定确定性用户 | 全专线 + 大流量包 | 配合折扣码 (如 ld888) 压降成本 |
-| **不限时流量包** | 30 - 100 元/一次性 | 轻度用户、备用防失联 | 基础中转线路 | 用多少扣多少，适合长期挂载 |
-| **免费 / 低价包年** | 0 - 10 元/年 | 不推荐 | 垃圾公网直连，严重超载 | 极易随时跑路与泄露隐私，避坑 |
-
-## 五、总结
-
-科学上网并不复杂，挑选可靠的服务商（如 [灵动云](/providers/lingdong-cloud) 或 [飞猫云](/providers/flycat-cloud)），就能享受极速畅快的科学上网体验。
-
-<div class="mt-8 p-6 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 not-prose"><h4 class="text-base font-bold text-slate-900 dark:text-white mb-3">🔗 延伸阅读与相关文章推荐</h4><div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm"><a href="/ranks/top-stable-vpn-ladder" class="text-blue-600 dark:text-blue-400 hover:underline">→ 2026 稳定梯子与翻墙机场综合实力榜</a><a href="/guides/clash-verge-rev-beginner-tutorial" class="text-blue-600 dark:text-blue-400 hover:underline">→ Clash Verge Rev 保姆级新手图文教程</a><a href="/guides/chatgpt-ip-blocked-solution-guide" class="text-blue-600 dark:text-blue-400 hover:underline">→ ChatGPT 1020 报错与 IP 风控完全解决指南</a><a href="/lines/iplc-dedicated-line-airport-guide" class="text-blue-600 dark:text-blue-400 hover:underline">→ IPLC 国际专线与 BGP 中转原理深度对比</a></div></div>
